@@ -1,0 +1,946 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My introduction</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Retrina group" />
+
+    <!--  FavIcon  -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,500,700" rel="stylesheet">
+
+    <!--  Plugins Css  -->
+    <link rel="stylesheet" href="assets/css/plugins.css">
+
+    <!--  Plugins Css  -->
+    <link rel="stylesheet" href="assets/css/animated.css">
+
+    <!--  Custom Style CSS  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+        ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+        background-color: #f5f5f5;
+        }
+        /*定义滚动条轨道 内阴影+圆角*/
+        ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+        background-color: #f5f5f5;
+        }
+        /*定义滑块 内阴影+圆角*/
+        ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #c8c8c8;
+        }
+
+        .body {
+            height: 1000px;
+            display: flex;
+            justify-content: flex-start;
+            /* align-items: center; */
+            position: relative;
+        }
+        .body_left {
+            position: absolute;
+            top: 120px;
+            left: 80px;
+            width: 400px;
+            height: 790px;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 5px 6px 18px black;
+        }
+        .image {
+            width: 400px;
+            height: 220px;
+            border-radius: 10px 10px 0 0;
+        }
+        .xhs_conter {
+            width: 400px;
+            height: 500px;
+            background-color: rgb(209, 208, 208);
+            position: absolute;
+            top: 290px;
+            left: 0;
+            z-index: 10;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .xhs_conter_top {
+            height: 50px;
+            width: 100%;
+            background-color: white;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .note {
+            width: 60px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .collection {
+            width: 90px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .active {
+            border-bottom:2px solid orange
+        }
+        .xhs_conter_center {
+            /* background-color: aquamarine; */
+            width: 400px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+        }
+        .note_box {
+            display: block;
+            height: 450px;
+        }
+        .colle_box {
+            display: none;
+            width: 95%;
+            height: 95%;
+            text-align: center;
+        }
+        .img_box {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .body_right {
+            position: absolute;
+            top: 120px;
+            left: 580px;
+            width: 900px;
+            height: 790px;
+            border-radius: 10px 10px 0 0;
+            /* box-shadow: 5px 6px 18px black; */
+            display: flex;
+            justify-content: center;
+        }
+        .body_right_center {
+            width: 900px;
+            height: 790px;
+            /* margin-top: 80px; */
+            display: none;
+            justify-content: center;
+        }
+        .title {
+            position: absolute;
+            top: 10px;;
+            left: 10px;
+            animation-name: title_in;
+            /* transform: translateY(-100px); */
+            animation-duration:1s;
+        }
+        .english {
+            position: relative;
+            position: absolute;
+            top: 80px;
+            left: 0px;
+            border-radius: 10px 0 0 10px;
+            border: 2px solid black;
+            width: 450px;
+            height: 650px;
+            animation-name: text_in;
+            animation-duration:1.5s;
+            overflow-y: scroll;
+            animation-fill-mode: forwards;
+        }
+        .english2 {
+            position: relative;
+            position: absolute;
+            top: 80px;
+            left: 200px;
+            border-radius: 10px 0 0 10px;
+            border: 2px solid black;
+            width: 450px;
+            height: 650px;
+            animation-name: text_in2;
+            animation-duration:1.5s;
+            animation-fill-mode: forwards;
+            overflow-y: scroll;
+        }
+        .chinese {
+            position: absolute;
+            top: 80px;
+            left: 250px;
+            border-radius: 0 10px 10px 0;
+            border: 2px solid black;
+            width: 450px;
+            height: 650px;
+            background-color: black;
+            color: white;
+            display:block;
+            animation-name: text_in;
+            animation-duration:2s;
+            animation-fill-mode: forwards;
+            display: none;
+            overflow-y: scroll;
+        }
+        .actives {
+            border-bottom: 4px solid orange;
+        }
+        .my_data {
+            display: none;
+            /* background-color: aqua; */
+            width: 100%;
+            height: 450px;
+            overflow-y: scroll;
+
+        }
+        .data_tem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* background-color: rgb(146, 146, 146); */
+            width: 100%;
+            height: 1200px;
+        }
+        .data_item_1 {
+            width: 88%;
+            height: 140px;
+            background-color: white;
+            border-radius: 12px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .data_item_1:hover {
+            box-shadow: 6px 6px 12px black;
+            transition: 0.7s;
+        }
+        .data_show_show {
+            position: absolute;
+            background-color: rgba(255, 255, 255);
+            width: 900px;
+            height: 790px;
+            z-index: 10;
+            display: none;
+            overflow-y: scroll;
+        }
+        .img_show_box10086 {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .img_show_box10086_box {
+            width: 400px;
+            height: 490px;
+            margin-right: 30px;
+            margin-top: 30px;
+            box-shadow: 5px 5px 16px black;
+            border-radius: 12px;
+        }
+
+        @keyframes title_in  {
+            0% {
+            transform: translateY(-100px);
+            }
+            100% {
+
+            }
+        }
+        @keyframes text_in {
+            0% {
+                opacity: 0.1;
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(200px);
+            }
+        }
+        @keyframes text_in2 {
+            0% {
+            }
+            100% {
+                transform: translateX(-200px);
+            }
+        }
+    </style>
+
+</head>
+<body data-spy="scroll" data-target="#scrollspy" data-offset="61">
+
+    <!-- ==================== Start Loading ==================== -->
+
+    <div id="overlayer">
+        <div id="loading">
+            <div id="loading_1" class="loading">.</div>
+            <div id="loading_2" class="loading">.</div>
+            <div id="loading_3" class="loading">.</div>
+            <div id="loading_4" class="loading">l</div>
+            <div id="loading_5" class="loading">o</div>
+            <div id="loading_6" class="loading">a</div>
+            <div id="loading_7" class="loading">d</div>
+            <div id="loading_8" class="loading">i</div>
+            <div id="loading_9" class="loading">n</div>
+            <div id="loading_10" class="loading">g</div>
+            <div id="loading_11" class="loading">.</div>
+            <div id="loading_12" class="loading">.</div>
+            <div id="loading_13" class="loading">.</div>
+            <div id="loading_14" class="loading">.</div>
+            <div id="loading_15" class="loading">.</div>
+        </div>
+    </div>
+
+    <!-- ==================== End Loading ==================== -->
+
+
+    <!-- ==================== Start Navgition ==================== -->
+
+    <header class="fixed-top">
+        <div class="logo-area">
+            <a href="index.html" class="logo">
+                <span class="size-sm mb-0 pl-4 mb-1">My resume</span>
+            </a>
+        </div>
+        <div class="header-info-area">
+            <a class="overlay-menu-toggler lni-menu size-md" href="javascript:void(0);"></a>
+            <div class="overlay-menu">
+                <div class="container">
+                        <div class="row">
+                            <div class="col-lg-9 col-md-4 overlay-nav">
+                                <ul class="list-group text-left" id="myMenu">
+                                    <li class="list-group-item">
+                                        <a href="#hero"><span class="nm">01.</span>Home</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#about"><span class="nm">02.</span>About</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#services"><span class="nm">03.</span>My Specialty</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#portfolio"><span class="nm">04.</span>My Creative Works</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#testimonial"><span class="nm">05.</span>My Dance</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#blog"><span class="nm">06.</span>Final Introduction</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="contact-info">
+                                    <div class="item">
+                                        <h6>Tel :</h6>
+                                        <p>18395803883</p>
+                                    </div>
+                                    <div class="item">
+                                        <h6>Address :</h6>
+                                        <p> Hangzhou</p>
+                                    </div>
+                                    <div class="item">
+                                        <h6>Email :</h6>
+                                        <p><a href="---------------------" class="__cf_email__" data-cfemail="47292633262b3e202e2b2b222907202a262e2b6924282a">[chen.shuxian@rkcshz.cn]</a></p>
+                                        <!-- <ul class="list-inline socails mt-4">
+                                            <li class="list-inline-item"><a href="#"><i class="lni-facebook-filled"></i></a></li>
+                                            <li class="list-inline-item"><a href="#"><i class="lni-twitter-filled"></i></a></li>
+                                            <li class="list-inline-item"><a href="#"><i class="lni-github-original"></i></a></li>
+                                            <li class="list-inline-item"><a href="#"><i class="lni-linkedin-original"></i></a></li>
+                                        </ul> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+     <!-- ==================== End Navgition ==================== -->
+
+
+    <!-- ==================== Start Works ==================== -->
+
+        <div class="body">
+            <div class="body_left">
+                <div class="image">
+                    <img src="assets/img/small_red_book_20220930163532.jpg" alt="" style="border-radius: 10px 10px 0 0;" >             
+                </div>
+                <div class="xhs_conter">
+                    <div class="xhs_conter_top">
+                        <div class="note"><a href="javascript:;" class="active">note</a></div>
+                        <div class="mydata"><a href="javascript:;">my data</a></div>
+                        <div class="collection"><a href="javascript:;">collection</a></div>
+                    </div>
+                    <div class="xhs_conter_center">
+                        <div class="note_box">
+                            <a href="javascript:;"><h2 style="margin-top: 30px;" >Summer&nbsp;Sea&nbsp;Boy</h2></a> <br>
+                            <a href="javascript:;"><h2 style="margin-top: 30px;">Libra</h2></a> <br>
+                            <a href="javascript:;"><h2 style="margin-top: 30px;">Informal&nbsp;essay</h2></a>
+                        </div>
+                        <div class="my_data">
+                            <blockquote class="data_tem">
+                                <blockquote class="data_item_1">
+                                    <blockquote style="border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px;  " >
+                                        <p style="font-size: 18px; font-family: 'SimHei;">夏天适合爱</p>
+                                    </blockquote>
+                                </blockquote>
+                                <blockquote class="data_item_1">
+
+                                </blockquote>
+                                <blockquote class="data_item_1">
+
+                                </blockquote>
+                                <blockquote class="data_item_1">
+
+                                </blockquote>
+                                <blockquote class="data_item_1">
+
+                                </blockquote>
+                                <blockquote class="data_item_1">
+
+                                </blockquote>
+                                <blockquote class="data_item_1">
+
+                                </blockquote>
+                                <blockquote class="data_item_1">
+
+                                </blockquote>
+                            </blockquote>
+                        </div>
+                        <div class="colle_box">
+                            <!-- <div class="img_box"> -->
+                                <img src="assets/img/快乐时光.png" alt="" style="width: 123px; height:123px ; margin-top: 30px; ">
+                                <h5>I collected the happiness of the world only for you!</h5>
+                                <!-- <p>祝您快乐</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="body_right">
+                <h1 class="title">My Articles</h1>
+                <h3 class="h3" style="position: absolute ; top: 200px; left: 20px;">Please select boston or freeloop on the left. <br>Click the corresponding title to read the article. </h3>
+
+                <div class="body_right_center" style="position: relative ;" >
+                    <div class="english">
+                        <img src="assets/img/中英文 中文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; " class="img1" >
+                        <img src="assets/img/英文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; display: none; " class="img2" >
+                        <h6 style="margin: 30px 10px 0 30px;">
+                            We talked so late that day, until the candles lost their voices and the golden blood flowed<br/>
+                            He rolled me flat on the carpet and I was like a piece of non-woven fabric<br/>
+                            He kissed my belly button, kissed my belly, I arched my waist like a bow<br/>
+                            He is my strings<br/>
+                            rang all night<br/>
+                            <br>
+                            The alcohol delays some of the thoughts so everything seems to be in slow motion<br/>
+                            I've seen the wind out of the car window pour in and the color of the lamp is diluted into long strips of oil painting<br/>
+                            Then I yelled out my friend's name<br/>
+                            The wind is going to blow my hat open<br/>
+                            It was as if all my life I had sought a moment of freedom;<br/>
+                            I am banished like an autumn wind<br/>
+                            <br>
+                            I don't know how late, midnight or early morning<br/>
+                            All the sounds are silent, there is no wind to understand our private feelings<br/>
+                            I am folded;<br/>
+                            Curled toes, folded knees or bowed waist<br/>
+                            If he's a murderer, I'm his booty<br/>
+                            Aggression goes through fire and water like a tsunami<br/>
+                            He opened the skylight——<br/>
+                            the moon is watching us<br/>
+                            I ignited and extinguished, turned into withered wax tears<br/>
+                            he blows me out<br/>
+                            refuse to keep me until dawn.<br/>
+                            <br>
+                            She is a poet I have never met.<br/>
+                            She writes about rivers and seas, about mountains and ridges,<br/>
+                            about the breaking of dawn,<br/> about the sky full of stars<br/>
+                            <br>
+                            die of youth-- <br>
+                            Died while I was in full bloom; so the cherry blossoms covered my body<br>
+                            <br>
+                            Everyone expects you to be as sharp as you can, expect you to take the high ground and dance<br>
+                            I'm different, I hope you will be a good citizen in your inch, be a coward in the face of danger<br>
+                            No need to steal the show<br>
+                            Leave it to me, don't leave it to fate<br>
+                            <br>
+                            I sit in a rotten classroom reading living poetry like a paradox<br/>
+                            <br>
+                            The wind can be everything, the drum and the waves, and my breast<br/>
+                            <br/>
+                            I was caught by something - the palms scrambling to get out of the gap. They pulled me back from the edge, but I don't want to go back<br/>
+                            The teacher's hand has calluses left from holding a pen for many years. When I opened my face, I saw a bottle of white roses that had fallen.<br>
+                            <br/>
+                            I am the swallow!in the cold nest named you<br/>
+                            The song I sing for you is a girl's soft woven bag<br/>
+                            No wind, no wind tonight<br/>
+                            Just the soft fluff on my belly and the throbbing heartbeat<br/>
+                            <br/>
+                            When I love you the most, I'm a partridge, I'm a cat that survives nine deaths<br/>
+                            I am the girdle of the wilderness, I am the wilting wind, hug you in the most primitive way<br/>
+                            <br/>
+                            Do you like that name<br/>
+                            Like it. It sounded ripe, dry, pale yellow sun and heavy straw<br/>
+                            Do you like that name<br/>
+                            Narrow and broad, like smooth flowing clear eyes and endless buds growing<br/>
+                            <br>
+                            All the streams formed a disordered picture before me. I was trapped inside, like I was about to be set on fire by the cold wind
+                            I felt a sudden sad, as if I hadn't seen the sunset for a long time<br>
+                            <br/>
+                            My back was burned almost like grew wings through the cracks<br/>
+                            <br/>
+                            They are charming in their forties and fifties, pale sculptures,<br/>
+                            And then they die,<br/>
+                            To die.<br/>
+                            <br/>
+                            Don't stick to a boxy room if you're free<br/>
+                            I always felt that the room was a cage,<br/>
+                            God felt that human thought and culture should not spread like this,<br/>
+                            So they keep people from moving;<br/>
+                            Have to run naked on the lawn with fingers and the soles of feet soft and stuck in the mud<br/>
+                            Standing in the tuyere every hair is scraped back<br/>
+                            My eyelids will drop and sure enough sweet alcohol is a trap<br/>
+                            There are traps everywhere. There are traps everywhere<br/>
+                            <br/>
+                            The gray earth covered the soles of his feet<br/>
+                            He stands silent on the dividing line of the century<br/>
+                            I asked him why the dispatch was only eighteen cents today;<br/>
+                            <br/>
+                            It was as if the whistle had alerted him and he turned his head<br/>
+                            The trench coat looks like the severed lips of a victim<br/>
+                            He closed the air vent and his neck<br/>
+                            <br/>
+                            "You're the most beautiful girl I've ever seen."<br/>
+                            He used a broken soul to praise another soul<br/>
+                            He wanted to leave something of his own in the last century<br/>
+                            I was silent.<br/>
+                            <br/>
+                            There were no people in the streets of the Zigonians, no one wanted to stay.<br/>
+                            I said: or, you go with me.<br/>
+                            To die of old age in a place where there's no wind.<br/>
+                            <br>
+                        </h6>                          
+                    </div>
+                    <div class="chinese" >
+                        <h6 style="margin: 30px 10px 0 30px;">
+                            那天我们聊到很晚，到蜡烛失声，流淌金色的血液<br/>
+                            他将我碾平展开在地毯上 我像是一片无纺布一样 <br/>
+                            他吻我的肚脐 吻我的小腹 我拱起了腰 像是一把弓 <br/>
+                            他就是我的琴弦<br/>
+                            拉响了一夜<br/>
+                            <br>
+                            酒精延迟了一些思想 所以一切都像是慢动作一样 <br/>
+                            我看过车窗外面的风倒灌进来 灯的颜色被稀释成长条的油画 <br/>
+                            然后我对着外面大喊我朋友的名字 <br/>
+                            风要把我的帽子吹开 <br/>
+                            就好像我一生都在追求自由的时刻； <br/>
+                            我被像来自秋天的风放逐了<br/>
+                            <br>
+                            我不知道是多晚 午夜或者凌晨<br/>
+                            万籁俱寂下 没有风理会我们的私情<br/>
+                            我被折叠；<br/>
+                            蜷起的脚趾 折起的膝盖或者弓起的腰<br/>
+                            要是他是杀人犯 我就是他的战利品<br/>
+                            侵略赴汤蹈火 像是海啸<br/>
+                            他打开了天窗——<br/>
+                            月亮在看我们<br/>
+                            我点燃又熄灭 化成了枯槁的蜡泪<br/>
+                            他吹熄我<br/> 
+                            不肯留我到天明。<br/>
+                            <br>
+                            她是我素未谋面的诗人。<br>
+                            她写江海 写山和山脊 写破晓时分 写繁星满天<br>
+                            <br>
+                            死于青春——
+                            在我盛放的时候死去 ；于是樱花砌满了我的全身<br>
+                            <br>
+                            人人都盼你锋芒尽出 盼你夺了高地起舞<br>
+                            我不一样  我盼你在你的方寸做良民 在险阻面前当个懦夫<br>
+                            无需抢占风头<br> 
+                            交给我 别交给命数<br>
+                            <br>
+                            我坐在腐朽的教室里读活生生的诗 像悖论<br>
+                            <br>
+                            风可以作万物 作鼓作浪 作我的胸脯<br>
+                            <br>
+                            我被一些东西抓住——那些从间隙里争先恐后钻出来的手掌。他们把我从边缘往回拽 可我不想回去<br>
+                            老师的手上有常年握笔留下来的茧 我张着脸的时候看见了一瓶已经凋落的白玫瑰<br>
+                            <br>
+                            我是燕子啊 栖息在名为你的冰冷的巢臼里<br>
+                            我为你唱的歌 是女孩柔软的编织袋<br>
+                            没有风 今夜没有风<br> 
+                            只有我肚子上柔软的绒毛和搏动的心跳<br>
+                            <br>
+                            最爱你的时候 我是鹧鸪 我是九死一生的猫 <br>
+                            我是原野的腰封 我是萎顿的风 用最原始的方式拥抱你<br>
+                            <br>
+                            你喜欢这个名字吗<br>
+                            喜欢 听起来就 熟透了 干燥的 浅黄色的太阳和 沉甸甸的稻草<br>
+                            你喜欢这个名字吗<br>
+                            又狭窄又宽阔的 像是平和流淌的澄澈的眼睛和生生不息的胞芽日益增长<br>
+                            <br>
+                            所有的川流在我面前构成的一幅紊乱的画 我被困在里面 像要被冰冷的风给点燃<br> 
+                            突然觉得有点难过 好像很久没有看到日落<br> 
+                            <br>
+                            我的后背滚烫 几乎要从缝隙里长出翅膀<br>
+                            <br>
+                            她们迷人的是四五十岁的样子，如同惨白的雕塑，<br> 
+                            然后她们死去，<br> 
+                            死去。<br>
+                            <br>
+                            要是做自由的姿态 就不要拘在四四方方的房间<br>
+                            我始终觉得房间是牢笼，<br>
+                            上帝觉得人类思想文化不应该如此蔓延，<br>
+                            于是让人们不能居无定所<br>
+                            要赤身裸体奔跑在草坪上 手指和脚掌都是柔软的 陷入泥巴里<br>
+                            站在风口 每一根汗毛被刮向后面<br>
+                            我的眼皮要掉下去 果然甜蜜的酒精也是陷阱——<br>
+                            到处都是陷阱 都是陷阱<br>
+                            <br>
+                            灰色的土地埋没他的脚掌<br>
+                            他就站在，世纪的分割线上沉默<br>
+                            我问他 问他为什么今天的快报只卖一毛八；<br>
+                            <br>
+                            好像是鸣笛声惊动了他，他转过头<br>
+                            风衣像是被割裂的死者的唇部<br>
+                            他拢著风口和自己的脖颈<br>
+                            <br>
+                            “你是我见过最美丽的姑娘”<br>
+                            他用破烂的灵魂夸赞另一个灵魂<br>
+                            ——这他想在最后的世纪留下一些属于他的东西<br>
+                            我沉默了。<br>
+                            <br>
+                            茨冈人的街上没有行人，没有人愿意留下。<br>
+                            我说：要么，你跟我走吧。<br>
+                            去老死在一个没有风的地方。<br>
+                            <br>
+                        </h6>
+                    </div>                    
+                </div>
+                <div class="body_right_center" style="position: relative ;" >
+                    <div class="english">
+                        <img src="assets/img/中英文 中文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; " class="img1" >
+                        <img src="assets/img/英文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; display: none; " class="img2" >
+                        <h6 style="margin: 30px 10px 0 30px;">
+                            123in the light of the sun, is there anyone<br/>
+
+oh it has begun<br/>
+
+oh dear you look so lost<br/>
+
+eyes are red and tears are shed<br/>
+
+this world you must've crossed<br/>
+
+just said, you don't know me, you don't even care<br/>
+
+you said, you don't know me, you don't wear my chains<br/>
+
+essential and appealed<br/>
+
+carry all your thoughts across an open field<br/>
+
+when flowers gaze at you<br/>
+
+they're not the only ones who cry when they see you<br/>
+
+you said<br/>
+
+you don't know me, you don't even care<br/>
+
+oh,you said, you don't know me, you don't wear my chains<br/>
+
+she said I think I'll go to Boston<br/>
+
+I think I'll start a new life<br/>
+
+I think I'll start it over<br/>
+
+no one knows my name<br/>
+
+I'll get out of California<br/>
+
+I'm tired of the weather<br/>
+
+I think I'll get a lover and fly out to Spain<br/>
+
+I think I'll go to Boston<br/>
+
+
+                        </h6>                          
+                    </div>
+                    <div class="chinese" >
+                        <h6 style="margin: 30px 10px 0 30px;">
+                            在那耀眼的阳光下，有人吗?<br/>
+                            喔..这一切都将开始<br/>
+                            喔..，你看起来那么失落<br/>
+                            眼睛红红的，泪也流了下来<br/>
+                            你说，日子终究还是要过下去的<br/>
+                            你不了解我，甚至毫不关心<br/>
+                            你不了解我，不能容忍我<br/>
+                            总有一天会实现的<br/>
+                            带著你所有的想像<br/>
+                            穿过那一大片无垠草原...<br/>
+
+                        </h6>
+                    </div>                    
+                </div>
+                <div class="body_right_center" style="position: relative ;" >
+                    <div class="english">
+                        <img src="assets/img/中英文 中文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; " class="img1" >
+                        <img src="assets/img/英文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; display: none; " class="img2" >
+                        <h6 style="margin: 30px 10px 0 30px;">
+                            123in the light of the sun, is there anyone<br/>
+
+oh it has begun<br/>
+
+oh dear you look so lost<br/>
+
+eyes are red and tears are shed<br/>
+
+this world you must've crossed<br/>
+
+just said, you don't know me, you don't even care<br/>
+
+you said, you don't know me, you don't wear my chains<br/>
+
+essential and appealed<br/>
+
+carry all your thoughts across an open field<br/>
+
+when flowers gaze at you<br/>
+
+they're not the only ones who cry when they see you<br/>
+
+you said<br/>
+
+you don't know me, you don't even care<br/>
+
+oh,you said, you don't know me, you don't wear my chains<br/>
+
+she said I think I'll go to Boston<br/>
+
+I think I'll start a new life<br/>
+
+I think I'll start it over<br/>
+
+no one knows my name<br/>
+
+I'll get out of California<br/>
+
+I'm tired of the weather<br/>
+
+I think I'll get a lover and fly out to Spain<br/>
+
+I think I'll go to Boston<br/>
+
+
+                        </h6>                          
+                    </div>
+                    <div class="chinese" >
+                        <h6 style="margin: 30px 10px 0 30px;">
+                            在那耀眼的阳光下，有人吗?<br/>
+                            喔..这一切都将开始<br/>
+                            喔..，你看起来那么失落<br/>
+                            眼睛红红的，泪也流了下来<br/>
+                            你说，日子终究还是要过下去的<br/>
+                            你不了解我，甚至毫不关心<br/>
+                            你不了解我，不能容忍我<br/>
+                            总有一天会实现的<br/>
+                            带著你所有的想像<br/>
+                            穿过那一大片无垠草原...<br/>
+
+                        </h6>
+                    </div>                    
+                </div>
+                <div class="data_show_show">
+                    <div class="img_show_box10086">
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/微信图片_20221001120541.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/微信图片_202210011205411.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/微信图片_2022100112054110.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/微信图片_2022100112054111.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/微信图片_2022100112054112.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                    </div>   
+                    
+
+                </div>
+            </div>
+        </div>
+
+    <!-- ==================== End Works ==================== -->
+
+
+    <!-- ==================== Start Footer ==================== -->
+
+    <footer class="footer py-6">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <a class="logo" href="#">
+                            <span>Alice Chen</span>
+                        </a>
+                        <ul class="list-inline socails mt-4">
+                            <li class="list-inline-item"><a href="#"><i class="lni-facebook-filled"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="lni-twitter-filled"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="lni-github-original"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="lni-linkedin-original"></i></a></li>
+                        </ul>
+                        <p class="text-dark"> 2022 &copy; Alice Chen's Profile Page</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================  End Footer ==================== -->
+
+
+    <!-- ====================  Start  Color Scheme  ==================== -->
+
+    <a class="color-scheme text-white d-inline-block" href="javascript:void(0)"><i class="lni-night"></i></a>
+
+    <!-- ====================  End Color Scheme ==================== -->
+
+
+    <!-- ==================== Start Return to Top ==================== -->
+
+    <a href="javascript:void(0)" class="return-to-top"><i class="lni-chevron-up"></i></a>
+
+    <!-- ==================== End Return to Top ==================== -->
+
+
+
+    <!--  JavaScripts  -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+
+    <!--  Plugins JS  -->
+    <script src="assets/js/plugins.js"></script>
+
+    <!--  Plugins JS  -->
+    <script src="assets/js/wow.min.js"></script>
+
+    <!--  Custom JS  -->
+    <script src="assets/js/aras.js"></script>
+    <script>
+        let as=document.querySelector('.xhs_conter_top').querySelectorAll('a')
+        let divs=document.querySelector('.xhs_conter_center').querySelectorAll('div')  
+        let show=document.querySelector('.data_show_show')
+        for (let i=0;i<as.length;i++) {
+            // 开始给5个小li，设置索引号
+            as[i].setAttribute('index', i);
+            as[i].onclick = function () {
+                //1.上面的选项卡模块，点击某一个当前这一个底色是红色，其余不变（排他思想），修改类名的方式
+              //干掉所有人 其余的 li清除class这个类
+                for (var i = 0; i < as.length; i++) {
+                    as[i].className = ''
+                }
+                this.className='active'
+                let index =this.getAttribute('index')
+                if (index==1 ) {
+                        show.style.display='block'
+                    } else if (index==0 || index==2) {
+                        show.style.display='none'
+                    }
+                for (let j=0;j<divs.length;j++) {
+                    divs[j].style.display='none'
+                }
+                divs[index].style.display='block'
+            }
+        }
+        let ps=document.querySelector('.note_box').querySelectorAll('h2')
+        let ts=document.querySelector('.body_right').querySelectorAll('.body_right_center')
+        let imgs=document.querySelector('.body_right').querySelectorAll('.img1')
+        let imgs2=document.querySelector('.body_right').querySelectorAll('.img2')
+        let englishs=document.querySelector('.body_right').querySelectorAll('.english')
+        let chineses=document.querySelector('.body_right').querySelectorAll('.chinese')
+        let h3=document.querySelector('.h3')
+        for (let i=0;i<ps.length;i++) {
+            ps[i].setAttribute('index', i);
+            imgs[i].setAttribute('index', i);
+            imgs2[i].setAttribute('index', i);
+            ps[i].onclick = function () {
+                h3.style.display='none'
+                for (var i = 0; i < ps.length; i++) {
+                    ps[i].className = ''
+                }
+                this.className='actives'
+                let index =this.getAttribute('index')
+                for (let j=0;j<ts.length;j++) {
+                    ts[j].style.display='none'
+
+
+                }
+                ts[index].style.display='block'
+                englishs[index].className='english'
+                chineses[index].style.display='none'
+                imgs2[index].style.display='none'
+                imgs[index].style.display='block'
+
+            }
+            imgs[i].onclick=function() {
+                this.style.display="none"
+                let index =this.getAttribute('index')
+                for (let k = 0; k < imgs.length; k++) {
+                    englishs[k].className = ''
+                    chineses[k].style.display='none'
+                    imgs2[k].style.display='none'
+                }
+                englishs[index].className = 'english2'
+                chineses[index].style.display='block'
+                imgs2[index].style.display='block'
+            }
+            imgs2[i].onclick=function() {
+                this.style.display="none"
+                let index =this.getAttribute('index')
+                for (let k = 0; k < imgs2.length; k++) {
+                    englishs[k].className = ''
+                    chineses[k].style.display='none'
+                    imgs2[k].style.display='none'
+                }
+                englishs[index].className = 'english'
+                chineses[index].style.display='none'
+                imgs[index].style.display='block'
+            }
+        }
+        
+    </script>
+</body>
+</html>
