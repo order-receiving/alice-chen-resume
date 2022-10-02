@@ -43,7 +43,10 @@
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
         background-color: #c8c8c8;
         }
-
+        * {
+            margin: 0;
+            padding: 0;
+        }
         .body {
             height: 1000px;
             display: flex;
@@ -68,7 +71,7 @@
         .xhs_conter {
             width: 400px;
             height: 500px;
-            background-color: rgb(209, 208, 208);
+            background-color: rgb(238, 238, 238);
             position: absolute;
             top: 290px;
             left: 0;
@@ -222,7 +225,7 @@
             justify-content: center;
             /* background-color: rgb(146, 146, 146); */
             width: 100%;
-            height: 1200px;
+            height: 2200px;
         }
         .data_item_1 {
             width: 88%;
@@ -231,12 +234,18 @@
             border-radius: 12px;
             margin-top: 15px;
             display: flex;
-            justify-content: space-between;
+            /* justify-content: space-between; */
             align-items: center;
         }
         .data_item_1:hover {
             box-shadow: 6px 6px 12px black;
             transition: 0.7s;
+        }
+        .data_icons {
+            display: flex;
+            height: 40px;
+            align-items: center;
+            margin-top: 50px;
         }
         .data_show_show {
             position: absolute;
@@ -245,7 +254,7 @@
             height: 790px;
             z-index: 10;
             display: none;
-            overflow-y: scroll;
+            /* overflow-y: scroll; */
         }
         .img_show_box10086 {
             display: flex;
@@ -255,13 +264,31 @@
         }
         .img_show_box10086_box {
             width: 400px;
-            height: 490px;
+            height: 470px;
             margin-right: 30px;
             margin-top: 30px;
             box-shadow: 5px 5px 16px black;
             border-radius: 12px;
+            background-color: white;
+            /* transform: translateX(500px);
+            transition: 1s; */
+            animation-name: text_in;
+            animation-duration:1.5s;
+            animation-fill-mode: forwards;
+            display: none;
         }
+        .img_show_box10086_box:hover {
+            transform: scale(1.1) translate(20px,20px);
+            transition: 0.7s;
+            
 
+        }
+        .data_textandNum {
+            margin-bottom: 0;
+            margin-left: 5px;
+            font-family: SimHei;
+            font-size: 14px;
+        }
         @keyframes title_in  {
             0% {
             transform: translateY(-100px);
@@ -393,7 +420,7 @@
                     <div class="xhs_conter_top">
                         <div class="note"><a href="javascript:;" class="active">note</a></div>
                         <div class="mydata"><a href="javascript:;">my data</a></div>
-                        <div class="collection"><a href="javascript:;">collection</a></div>
+                        <!-- <div class="collection"><a href="javascript:;">collection</a></div> -->
                     </div>
                     <div class="xhs_conter_center">
                         <div class="note_box">
@@ -404,33 +431,255 @@
                         <div class="my_data">
                             <blockquote class="data_tem">
                                 <blockquote class="data_item_1">
-                                    <blockquote style="border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
 
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">06-19</p>
                                     </blockquote>
-                                    <blockquote style="height: 100px;width: 220px;  " >
-                                        <p style="font-size: 18px; font-family: 'SimHei;">夏天适合爱</p>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">你上天堂&nbsp;我下地狱</p>
+                                        <blockquote class="data_icons" >
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >1万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >1231</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >31</p>
+                                        </blockquote>
                                     </blockquote>
                                 </blockquote>
                                 <blockquote class="data_item_1">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
 
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">06-21</p>
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">姐姐</p>
+                                        <blockquote class="data_icons" >
+                                            <!-- <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >1万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >996</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >996</p> -->
+                                            <img src="assets/img/警告.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" style="color:#d81e06 ;" >笔记违规</p>
+                                        </blockquote>
+                                    </blockquote>
                                 </blockquote>
                                 <blockquote class="data_item_1">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
 
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">07-05</p>
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">月亮和吻</p>
+                                        <blockquote class="data_icons" >
+                                            <!-- <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >1万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >996</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >996</p> -->
+                                            <img src="assets/img/警告.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" style="color:#d81e06 ;" >修改后审核</p>
+                                        </blockquote>
+                                    </blockquote>
                                 </blockquote>
                                 <blockquote class="data_item_1">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
 
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">07-12</p>
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">夏天适合爱</p>
+                                        <blockquote class="data_icons" >
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >1万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >996</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >25</p>
+                                        </blockquote>
+                                    </blockquote>
                                 </blockquote>
                                 <blockquote class="data_item_1">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
 
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">07-14</p>
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">爱欲是虫&nbsp;勾出谎话连篇</p>
+                                        <blockquote class="data_icons" >
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >1万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >912</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >17</p>
+                                        </blockquote>
+                                    </blockquote>
                                 </blockquote>
                                 <blockquote class="data_item_1">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
 
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">07-19</p>
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">恨死我吧</p>
+                                        <blockquote class="data_icons" >
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >2万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >1384</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >25</p>
+                                        </blockquote>
+                                    </blockquote>
                                 </blockquote>
                                 <blockquote class="data_item_1">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
 
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">07-21</p>
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">她想要他招安</p>
+                                        <blockquote class="data_icons" >
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >1万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >1252</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >57</p>
+                                        </blockquote>
+                                    </blockquote>
                                 </blockquote>
                                 <blockquote class="data_item_1">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
 
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">09-11</p>
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">这是我的大冒险</p>
+                                        <blockquote class="data_icons" >
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >1万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >873</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >21</p>
+                                        </blockquote>
+                                    </blockquote>
+                                </blockquote>
+                                <blockquote class="data_item_1">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
+
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">09-12</p>
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">我是她唯一的浮木</p>
+                                        <blockquote class="data_icons" >
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >3万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >1987</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >129</p>
+                                        </blockquote>
+                                    </blockquote>
+                                </blockquote>
+                                <blockquote class="data_item_1">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
+
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">09-13</p>
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">小狗</p>
+                                        <blockquote class="data_icons" >
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >1万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >727</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >8</p>
+                                        </blockquote>
+                                    </blockquote>
+                                </blockquote>
+                                <blockquote class="data_item_1">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
+
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">07-15</p>
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">没有宝宝&nbsp;再来一次</p>
+                                        <blockquote class="data_icons" >
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >2万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >747</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >29</p>
+                                        </blockquote>
+                                    </blockquote>
+                                </blockquote>
+                                <blockquote class="data_item_1">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
+
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">09-16</p>
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">好学生不能亲亲哦</p>
+                                        <blockquote class="data_icons" >
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >3万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >1738</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >33</p>
+                                        </blockquote>
+                                    </blockquote>
+                                </blockquote>         
+                                <blockquote class="data_item_1">
+                                    <blockquote style=" position: relative; border-radius: 8px; background-color: black; width: 80px; height: 100px; margin-top: 15px; margin-left: 10px; ">
+                                        <p style="font-size: 12px;color: white;transform: scale(0.2); " >
+
+                                        </p>
+                                        <p style="z-index: 10; color: white; position: absolute; bottom: 3px; margin-bottom: 0; left: 16px;">09-20</p>
+                                    </blockquote>
+                                    <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
+                                        <p style="font-size: 16px; font-family: 'SimHei;">宝宝&nbsp;这个时候&nbsp;不能喊停</p>
+                                        <blockquote class="data_icons" >
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >9万</p>
+                                            <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >3712</p>
+                                            <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
+                                            <p class="data_textandNum" >304</p>
+                                        </blockquote>
+                                    </blockquote>
                                 </blockquote>
                             </blockquote>
                         </div>
@@ -783,19 +1032,43 @@ I think I'll go to Boston<br/>
                 <div class="data_show_show">
                     <div class="img_show_box10086">
                         <div class="img_show_box10086_box">
-                            <img src="assets/img/微信图片_20221001120541.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                            <img src="assets/img/619.jpg" alt="" style="width: 400px;border-radius: 12px; ">
                         </div>
                         <div class="img_show_box10086_box">
-                            <img src="assets/img/微信图片_202210011205411.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                            <img src="assets/img/621.jpg" alt="" style="width: 400px;border-radius: 12px; ">
                         </div>
                         <div class="img_show_box10086_box">
-                            <img src="assets/img/微信图片_2022100112054110.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                            <img src="assets/img/705.jpg" alt="" style="width: 400px;border-radius: 12px; ">
                         </div>
                         <div class="img_show_box10086_box">
-                            <img src="assets/img/微信图片_2022100112054111.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                            <img src="assets/img/712.jpg" alt="" style="width: 400px;border-radius: 12px; ">
                         </div>
                         <div class="img_show_box10086_box">
-                            <img src="assets/img/微信图片_2022100112054112.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                            <img src="assets/img/714.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/719.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/721.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/911.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/912.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/913.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/915.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/916.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                        </div>
+                        <div class="img_show_box10086_box">
+                            <img src="assets/img/920.jpg" alt="" style="width: 400px;border-radius: 12px; ">
                         </div>
                     </div>   
                     
@@ -940,7 +1213,21 @@ I think I'll go to Boston<br/>
                 imgs[index].style.display='block'
             }
         }
-        
+        let d_items=document.querySelectorAll('.data_item_1')
+        let img_show_box=document.querySelectorAll('.img_show_box10086_box')
+        for (let i=0;i<d_items.length;i ++) {
+            d_items[i].setAttribute('index', i);
+            d_items[i].onmouseover=function () {
+                let index =this.getAttribute('index')
+                for (let j=0;j<img_show_box.length;j++) {
+                    img_show_box[j].style.display='none'
+                }
+                img_show_box[index].style.display='block'
+
+            }
+            
+
+        }
     </script>
 </body>
 </html>
