@@ -113,7 +113,8 @@
         .xhs_conter_center {
             /* background-color: aquamarine; */
             width: 400px;
-            height: 450px;
+            height: 850px;
+            overflow-y: scroll;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -121,7 +122,7 @@
         }
         .note_box {
             display: block;
-            height: 450px;
+            height: 500px;
         }
         .colle_box {
             display: none;
@@ -175,7 +176,7 @@
             animation-duration:1.5s;
             overflow-y: scroll;
             animation-fill-mode: forwards;
-        }
+        }       
         .english2 {
             position: relative;
             position: absolute;
@@ -289,6 +290,27 @@
             font-family: SimHei;
             font-size: 14px;
         }
+        /* .newAdd_demand {
+            height: 1500px;
+        } */
+        .short_li {
+            width: 140px;
+            margin: 5px 0 5px 0;
+            animation-name: short_li;
+            animation-duration:1.5s;
+        }
+        .short {
+            animation-name: short_li;
+            animation-duration:1s;
+        }
+        @keyframes short_li {
+            0% {
+            opacity: 0.2;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
         @keyframes title_in  {
             0% {
             transform: translateY(-100px);
@@ -365,16 +387,19 @@
                                         <a href="#about"><span class="nm">02.</span>About</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#services"><span class="nm">03.</span>My Specialty</a>
+                                        <a href="#portfolio"><span class="nm">03.</span>My Art Portfolio</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#portfolio"><span class="nm">04.</span>My Creative Works</a>
+                                        <a href="#testimonial"><span class="nm">04.</span>My Dance</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#testimonial"><span class="nm">05.</span>My Dance</a>
+                                        <a href="#team"><span class="nm">05.</span>MY daily life</a>
+                                    </li>                                   
+                                    <li class="list-group-item">
+                                        <a href="#blog"><span class="nm">06.</span>Model photo</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#blog"><span class="nm">06.</span>Final Introduction</a>
+                                        <a href="#Writing"><span class="nm">07.</span>My Writing</a>
                                     </li>
                                 </ul>
                             </div>
@@ -390,7 +415,7 @@
                                     </div>
                                     <div class="item">
                                         <h6>Email :</h6>
-                                        <p><a href="---------------------" class="__cf_email__" data-cfemail="47292633262b3e202e2b2b222907202a262e2b6924282a">[chen.shuxian@rkcshz.cn]</a></p>
+                                        <p><a href="javascript:;" class="__cf_email__" data-cfemail="47292633262b3e202e2b2b222907202a262e2b6924282a">[chen.shuxian@rkcshz.cn]</a></p>
                                         <!-- <ul class="list-inline socails mt-4">
                                             <li class="list-inline-item"><a href="#"><i class="lni-facebook-filled"></i></a></li>
                                             <li class="list-inline-item"><a href="#"><i class="lni-twitter-filled"></i></a></li>
@@ -427,6 +452,27 @@
                             <a href="javascript:;"><h2 style="margin-top: 30px;" >Summer&nbsp;Sea&nbsp;Boy</h2></a> <br>
                             <a href="javascript:;"><h2 style="margin-top: 30px;">Libra</h2></a> <br>
                             <a href="javascript:;"><h2 style="margin-top: 30px;">Informal&nbsp;essay</h2></a>
+                            <blockquote class="newAdd_demand" style="display:none ; width: 125px; ">
+                                <ul style="display: flex; flex-direction: column;">
+                                    <a href="javascript:;" class="active"><li>Short passage 1</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 2</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 3</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 4</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 5</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 6</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 7</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 8</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 9</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 10</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 11</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 12</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 13</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 14</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 15</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 16</li></a> 
+                                    <a href="javascript:;"><li class="short_li">Short passage 17</li></a>                                     
+                                   </ul>
+                            </blockquote>
                         </div>
                         <div class="my_data">
                             <blockquote class="data_tem">
@@ -459,14 +505,14 @@
                                     <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
                                         <p style="font-size: 16px; font-family: 'SimHei;">姐姐</p>
                                         <blockquote class="data_icons" >
-                                            <!-- <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
-                                            <p class="data_textandNum" >1万</p>
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >2万</p>
                                             <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
-                                            <p class="data_textandNum" >996</p>
+                                            <p class="data_textandNum" >1230</p>
                                             <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
-                                            <p class="data_textandNum" >996</p> -->
-                                            <img src="assets/img/警告.png" alt="" style="width: 15px; height: 8;">
-                                            <p class="data_textandNum" style="color:#d81e06 ;" >笔记违规</p>
+                                            <p class="data_textandNum" >37</p>
+                                            <!-- <img src="assets/img/警告.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" style="color:#d81e06 ;" >笔记违规</p> -->
                                         </blockquote>
                                     </blockquote>
                                 </blockquote>
@@ -480,14 +526,14 @@
                                     <blockquote style="height: 100px;width: 220px; margin-left: 15px;" >
                                         <p style="font-size: 16px; font-family: 'SimHei;">月亮和吻</p>
                                         <blockquote class="data_icons" >
-                                            <!-- <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
-                                            <p class="data_textandNum" >1万</p>
+                                            <img src="assets/img/浏览量.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" >2万</p>
                                             <img src="assets/img/爱心.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
-                                            <p class="data_textandNum" >996</p>
+                                            <p class="data_textandNum" >1005</p>
                                             <img src="assets/img/评论.png" alt="" style="width: 15px; height: 8; margin-left: 30px; ">
-                                            <p class="data_textandNum" >996</p> -->
-                                            <img src="assets/img/警告.png" alt="" style="width: 15px; height: 8;">
-                                            <p class="data_textandNum" style="color:#d81e06 ;" >修改后审核</p>
+                                            <p class="data_textandNum" >41</p>
+                                            <!-- <img src="assets/img/警告.png" alt="" style="width: 15px; height: 8;">
+                                            <p class="data_textandNum" style="color:#d81e06 ;" >修改后审核</p> -->
                                         </blockquote>
                                     </blockquote>
                                 </blockquote>
@@ -703,167 +749,840 @@
                         <img src="assets/img/中英文 中文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; " class="img1" >
                         <img src="assets/img/英文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; display: none; " class="img2" >
                         <h6 style="margin: 30px 10px 0 30px;">
-                            We talked so late that day, until the candles lost their voices and the golden blood flowed<br/>
-                            He rolled me flat on the carpet and I was like a piece of non-woven fabric<br/>
-                            He kissed my belly button, kissed my belly, I arched my waist like a bow<br/>
-                            He is my strings<br/>
-                            rang all night<br/>
+                            At dusk, I met a boy on the beach.<br>
+                            He was wearing a white shirt and a wide-brimmed straw hat. He stepped barefoot on the sand, facing me and back to the sea. Against the light, I could not see his eyebrows clearly.<br>
+                            He didn't come to me, but opened his palm at me.<br>
                             <br>
-                            The alcohol delays some of the thoughts so everything seems to be in slow motion<br/>
-                            I've seen the wind out of the car window pour in and the color of the lamp is diluted into long strips of oil painting<br/>
-                            Then I yelled out my friend's name<br/>
-                            The wind is going to blow my hat open<br/>
-                            It was as if all my life I had sought a moment of freedom;<br/>
-                            I am banished like an autumn wind<br/>
-                            <br>
-                            I don't know how late, midnight or early morning<br/>
-                            All the sounds are silent, there is no wind to understand our private feelings<br/>
-                            I am folded;<br/>
-                            Curled toes, folded knees or bowed waist<br/>
-                            If he's a murderer, I'm his booty<br/>
-                            Aggression goes through fire and water like a tsunami<br/>
-                            He opened the skylight——<br/>
-                            the moon is watching us<br/>
-                            I ignited and extinguished, turned into withered wax tears<br/>
-                            he blows me out<br/>
-                            refuse to keep me until dawn.<br/>
-                            <br>
-                            She is a poet I have never met.<br/>
-                            She writes about rivers and seas, about mountains and ridges,<br/>
-                            about the breaking of dawn,<br/> about the sky full of stars<br/>
-                            <br>
-                            die of youth-- <br>
-                            Died while I was in full bloom; so the cherry blossoms covered my body<br>
-                            <br>
-                            Everyone expects you to be as sharp as you can, expect you to take the high ground and dance<br>
-                            I'm different, I hope you will be a good citizen in your inch, be a coward in the face of danger<br>
-                            No need to steal the show<br>
-                            Leave it to me, don't leave it to fate<br>
-                            <br>
-                            I sit in a rotten classroom reading living poetry like a paradox<br/>
-                            <br>
-                            The wind can be everything, the drum and the waves, and my breast<br/>
-                            <br/>
-                            I was caught by something - the palms scrambling to get out of the gap. They pulled me back from the edge, but I don't want to go back<br/>
-                            The teacher's hand has calluses left from holding a pen for many years. When I opened my face, I saw a bottle of white roses that had fallen.<br>
-                            <br/>
-                            I am the swallow!in the cold nest named you<br/>
-                            The song I sing for you is a girl's soft woven bag<br/>
-                            No wind, no wind tonight<br/>
-                            Just the soft fluff on my belly and the throbbing heartbeat<br/>
-                            <br/>
-                            When I love you the most, I'm a partridge, I'm a cat that survives nine deaths<br/>
-                            I am the girdle of the wilderness, I am the wilting wind, hug you in the most primitive way<br/>
-                            <br/>
-                            Do you like that name<br/>
-                            Like it. It sounded ripe, dry, pale yellow sun and heavy straw<br/>
-                            Do you like that name<br/>
-                            Narrow and broad, like smooth flowing clear eyes and endless buds growing<br/>
-                            <br>
-                            All the streams formed a disordered picture before me. I was trapped inside, like I was about to be set on fire by the cold wind
-                            I felt a sudden sad, as if I hadn't seen the sunset for a long time<br>
-                            <br/>
-                            My back was burned almost like grew wings through the cracks<br/>
-                            <br/>
-                            They are charming in their forties and fifties, pale sculptures,<br/>
-                            And then they die,<br/>
-                            To die.<br/>
-                            <br/>
-                            Don't stick to a boxy room if you're free<br/>
-                            I always felt that the room was a cage,<br/>
-                            God felt that human thought and culture should not spread like this,<br/>
-                            So they keep people from moving;<br/>
-                            Have to run naked on the lawn with fingers and the soles of feet soft and stuck in the mud<br/>
-                            Standing in the tuyere every hair is scraped back<br/>
-                            My eyelids will drop and sure enough sweet alcohol is a trap<br/>
-                            There are traps everywhere. There are traps everywhere<br/>
-                            <br/>
-                            The gray earth covered the soles of his feet<br/>
-                            He stands silent on the dividing line of the century<br/>
-                            I asked him why the dispatch was only eighteen cents today;<br/>
-                            <br/>
-                            It was as if the whistle had alerted him and he turned his head<br/>
-                            The trench coat looks like the severed lips of a victim<br/>
-                            He closed the air vent and his neck<br/>
-                            <br/>
-                            "You're the most beautiful girl I've ever seen."<br/>
-                            He used a broken soul to praise another soul<br/>
-                            He wanted to leave something of his own in the last century<br/>
-                            I was silent.<br/>
-                            <br/>
-                            There were no people in the streets of the Zigonians, no one wanted to stay.<br/>
-                            I said: or, you go with me.<br/>
-                            To die of old age in a place where there's no wind.<br/>
-                            <br>
+                            ——At dusk, two parallel worlds will have a point of coincidence. At that time, people will see a lot of things that they usually cannot see<br>
                         </h6>                          
                     </div>
                     <div class="chinese" >
                         <h6 style="margin: 30px 10px 0 30px;">
-                            那天我们聊到很晚，到蜡烛失声，流淌金色的血液<br/>
-                            他将我碾平展开在地毯上 我像是一片无纺布一样 <br/>
-                            他吻我的肚脐 吻我的小腹 我拱起了腰 像是一把弓 <br/>
-                            他就是我的琴弦<br/>
-                            拉响了一夜<br/>
+                            · 他是迫降的神明 是泅水的鲸 是我那个盛夏的花火<br>
+                            <br>                            
+我快要忘记他了<br>
+我的恋人是蓝色的月光 是铺了涛声的海浪<br>
+他穿着白色的衬衣 带着宽边的草帽 他赤脚踩在沙滩上 面朝我 背对着大海 逆着光 我看不清他的眉眼<br>
+他不向我走来 却冲我摊开了掌心<br>
+第一次⻅到他的时候是在⻩昏的海滩 父母卸下了厚重的行李 我急不可耐的跑到了海 滩边<br>
+这里的沙子带着石砾 或者还有涨潮时的⻉壳<br>
+他就枕着手臂躺在棕榈树下 嘴里叼着一片叶<br>
+我凑近他 以为是在小憩的人<br>
+他慢吞吞的抬起眼睛看我 发懒的大猫一样 又缓缓阖上眼睛<br>
+“他是谁?” “没有人知道，大概是个孤儿。”<br>
+我又看⻅了他 他躺在水面上 水的浮力托起他 像是一片薄薄的白帆 我膝盖浸没着海水，瑟缩了一下<br>
+“你不冷吗。”<br>
+我壮着胆子喊他。 他沉了下去，忽而间出现在我面前，像是某种⻥类一样喷出了水柱。 朝我伸出手。<br>
+水流包裹住我的身体，当身体适应温度的时候就成为了温暖的膜<br>
+我在水下努力的睁开眼，可是看不清他。<br>
+他在我身边洄游。<br>
+忽而握住我的胯，把我托举在水面上。<br>
+我是沾满水珠波光粼粼的⻥，他的气息落在我的肚脐。<br>
+我张着眼睛看他，看水从他睫毛簌簌滚落。<br>
+而后滚下他鼓鼓的面颊。<br>
+<br>
+ ......我们并排坐在沙滩上，我用手指撑开头发，好让它快些变干。 “你叫什么。”<br>
+我转过头去问他。<br>
+他也看向我。<br>
+他的嘴唇饱满而干裂的。它应该像蜜糖。<br>
+于是我凑了上去，然后用舌尖舔湿他。<br>
+他睁着眼睛看着我，缓缓地眨了一下，没有回应，也没有退避。<br>
+第二天晚饭后，母亲在餐厅大声喊我的名字。 “阿⻨，有人来找你。” 我⻜奔下楼，看到了站在那里的他。<br>
+“妈，我去去就来。” 我拉过他的手，⻜奔出⻔。<br>
+他带我来到了海边的悬崖。脚下是海水。 他站在悬崖边，一只手牵着我。<br>
+“你叫阿⻨。”<br>
+“是的。” 他拨开我面颊上的头发，然后像我昨天一样，舔湿了我的唇缝。 “阿⻨喜欢这样吗?”<br>
+他拢着我的脸问。 “喜欢。”<br>
+外面的暴雨下了一整夜。<br>
+于是最后一颗⻨子也饱浸了夏天的第一场雨。<br>
+他的眼神⻘涩而坚韧，像是初生的兽<br>
+毛绒绒的脑袋拱在我两腿之间，那是十五六岁的我初尝的禁果。<br>
+夏日昼⻓夜短，于是我们看到落日伴随神寺的烟花。 “你会一直在这里吗。” 我看向他。他撑开了身体，平和的躺在我的身侧。 我想问的或许是，你会等我吗。 他仰起头，看烟花。<br>
+于是我也抬头，灿烂盛大。<br>
+“在海岸线的尽头，我会来找你。” 他翻了个身，朝向我。握住了我的手，一根一根亲吻我蜷缩的手指，直至它们全部展 开。<br>
+来年春假，我又来到了海边。<br>
+<br>
+ ——在⻩昏的时候，两个平行世界会有一条重合的点。那个时候，人类会看到很多平 时看不到的东⻄<br>
+                        </h6>
+                    </div>                    
+                </div>
+                <div class="body_right_center" style="position: relative ;" >
+                    <div class="english">
+                        <img src="assets/img/中英文 中文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; " class="img1" >
+                        <img src="assets/img/英文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; display: none; " class="img2" >
+                        <h6 style="margin: 30px 10px 0 30px;">
+                            A story about girls, Anubis, mummies and hearts.<br>
                             <br>
-                            酒精延迟了一些思想 所以一切都像是慢动作一样 <br/>
-                            我看过车窗外面的风倒灌进来 灯的颜色被稀释成长条的油画 <br/>
-                            然后我对着外面大喊我朋友的名字 <br/>
-                            风要把我的帽子吹开 <br/>
-                            就好像我一生都在追求自由的时刻； <br/>
-                            我被像来自秋天的风放逐了<br/>
+                            ·You have the right to remain silent, but everything you say will become evidence in court.<br>
                             <br>
-                            我不知道是多晚 午夜或者凌晨<br/>
-                            万籁俱寂下 没有风理会我们的私情<br/>
-                            我被折叠；<br/>
-                            蜷起的脚趾 折起的膝盖或者弓起的腰<br/>
-                            要是他是杀人犯 我就是他的战利品<br/>
-                            侵略赴汤蹈火 像是海啸<br/>
-                            他打开了天窗——<br/>
-                            月亮在看我们<br/>
-                            我点燃又熄灭 化成了枯槁的蜡泪<br/>
-                            他吹熄我<br/> 
-                            不肯留我到天明。<br/>
+                            "It's easy, just a little ethylene glycol and add it to his drink. Like, Coke with sugar?"<br>
+                            - "We found from the deceased that the deceased had taken an excessive amount of ethylene glycol before his death."
                             <br>
+                            "It's not a thing! ... I mean, Ali is my father's police dog and grew up with me since childhood."<br>
+                            - "Miss, you seem to respect this dog very much."<br>
+                            <br>
+                            "When that time comes, I'll play stupid."<br>
+                            -"...I...I can't remember”<br>
+                            <br>
+                            "Liang, will it rain tomorrow..."
+                        </h6>                          
+                    </div>
+                    <div class="chinese" >
+                        <h6 style="margin: 30px 10px 0 30px;">
+                            ·你有权保持沉默，但你所说的一切都将成为呈堂证供。<br>
+                            <br>
+（一）<br>
+（剩余拘传时间：24小时）<br>
+“你和梁栎是什么关系，方小姐。”<br>
+“我跟梁栎不熟，我跟他只在实验室见过几面。”<br>
+“那天晚上八点的时候你在干嘛。”“我在家。”<br>
+“有人能作证吗？”“我父母晚上出去了，家里就我一个人。”<br>
+“方小姐，你对我们有什么想说的吗？”<br>
+女孩缓缓抬起了眼睛。<br>
+“警长先生，你听过阿努比斯的故事吗…”<br>
+<br>
+“那些心脏比羽毛重的人，是会下地狱的……”<br>
+<br>
+“天才实验家之死。”<br>
+他把消息左滑，按下了锁屏。<br>
+“当杀人案发生的时候，媒体就会借机制造的噱头，你不需要害怕。”他仰起头把啤酒一饮而尽，捏扁了易拉罐随手抛开。<br>
+“你最近就住这儿吧，这儿安全，警察找不到你。”女孩站起身，把帽子扣上，“还有，不要乱丢垃圾。”<br>
+“…”他盯着女孩，“行。”<br>
+<br>
+（二）<br>
+“梁栎是个怎么样的人。”<br>
+“他啊，看上去斯斯文文的，上课没有很积极，但是成绩很好，老师让他完成的事情都做得挺好。”<br>
+“6.29号晚上你有见到过他吗？”<br>
+“晚上没有，我们下次四点多放学，我回寝室了，后来也没见过他。”<br>
+“之后你一直都在寝室吗？”<br>
+“对啊，那天晚上下大雨，我们都没出去，我舍友可以给我作证。”<br>
+“八点之后你有感受到什么异常吗？”<br>
+“七点多就开始下雨，异常的话……”<br>
+<br>
+——<br>
+“我靠，今天的雨真的大。”<br>
+“你去把窗帘拉上。”<br>
+“凭什么是我啊，诶？对面女寝今天怎么都黑着？”<br>
+“估计打雷停电了吧，这么关心啊，哪个妹妹在对面啊。”<br>
+“那对面肯定都是我妹妹。”<br>
+“去你的。”<br>
+<br>
+“6.29号啊，您说停电我想起来，好像是有那么一个晚上，打雷下雨，女生寝室都停电了。”<br>
+“那天你的舍友方诗不在是吗。”<br>
+“对，不过她最近经常回家住，她做实验，做得晚就不回来了。”<br>
+“她不住寝室的情况持续多久了。”<br>
+“也没多久，可能就是最近吧。”<br>
+“你知道她住哪里吗？”<br>
+“这不知道，可能回家？或者直接睡实验室都有可能吧。”<br>
+<br>
+“方诗，你打算什么时候让我出去。”男人躺在床上，枕着手，拖鞋勾在脚上晃晃悠悠。<br>
+“出去干什么。”女孩头也不抬的，手指飞快的敲打着手机屏幕，“喝点什么。”<br>
+“无糖可乐。”<br>
+“梁栎，你是不是把我这儿当招待所了。”<br>
+“不是你不让我出去吗。”男人笑了笑，舔了舔牙床。<br>
+女孩不说话了，朝他竖了一个中指。<br>
+<br>
+（三）<br>
+“长官，这是案发第一现场，已经在第一时间封锁了。”<br>
+警官的目光被实验桌上面圈出来的椭圆形吸引了，“这里是什么？”他抬了抬下巴。<br>
+“是一个天秤，我们赶到案发现场的时候，天秤左边放着一颗心脏，右边放着……”<br>
+“羽毛。”<br>
+“羽毛。”<br>
+无视手下略带疑惑的神情，警官踱步，“心脏拿去痕检了吗。”<br>
+“已经拿去法医室了，报告今天上午出来了，是梁栎的。”<br>
+<br>
+越来越有意思了。<br>
+<br>
+“嫌疑人还在看守所吗？”<br>
+“是的长官。”<br>
+“我一会去趟看守所，继续封锁现场。”<br>
+“是，长官。”<br>
+<br>
+（剩余拘传时间：19小时）<br>
+光线在她脸上交错成鲜明的明暗对比，方诗目不转睛的盯着桌子上的一个光斑。<br>
+“继续给我讲讲阿努比斯的故事吧。”<br>
+“长官不会用自己查吗？”<br>
+他没有理会女孩的反问，反倒心平气和的笑了笑，“那么我们换个话题，为什么你要帮助梁栎假死。”<br>
+“长官，你要去问他。我只是，恰好能帮助他，满足一个小小的愿望而已。”<br>
+“帮一个’不太熟’’只见过几面的’人？”<br>
+“这恰巧说明我心地善良，乐善好施，长官。”<br>
+“我们从死者身上发现了死者生前服用过过量的乙二醇。”<br>
+“乙二醇是实验室常见的防腐材料。”<br>
+“请看着我的眼睛方小姐，”<br>
+警长的语调陡然一转，女孩下意识的抬头。<br>
+<br>
+这是他们的第一次对视。<br>
+“你相信，真的会有人的心脏，比羽毛轻吗？”<br>
+女孩罕见的沉默了一下，转而咧开了嘴，<br>
+“这不正是阿努比斯的意义所在吗。”<br>
+<br>
+……<br>
+自己是在哪里…？？<br>
+在面前站着一个黑色的长着牛角的怪物，长着卷曲头发。手里拎着一杆精致的铜质天秤，只可惜天秤上凝固了太多猩红的血液，已经看不出原本的黄色了。<br>
+是阿努比斯……<br>
+他找到了自己。<br>
+怪物看见了男人，朝他伸出了手。<br>
+胸口伴随着一阵撕裂般的疼痛。<br>
+心脏拖着黏稠的尾液，被堪堪放在了天秤上，指针盘上的指针开始疯狂的晃动。<br>
+<br>
+“我会上天堂…我会上天堂……”男人神经质的看着转盘上的指针，嘴里疯狂的念到着。<br>
+指针速度变慢了，有停下的趋势，明显的，指向心脏的那边。<br>
+“不…我会…我会上天堂…”<br>
+怪物咧着嘴开始发出咯咯的怪笑，猩红的眼睛死死的钉牢了地上蜷缩成一滩烂肉的男人。<br>
+“上天堂！我要上天堂！！”男人不知从哪里来的力气一跃而起去够那柄天秤。<br>
+怪物看着他，那一瞬间，丑陋的嘴脸竟然有一些悲悯。<br>
+长长的指甲贯穿了男人本来就已经空无一物的胸腔……<br>
+<br>
+（四）<br>
+（剩余拘传时间：16小时）<br>
+“可长官，我真的跟他不熟啊，你总不能就因为听了我的一个故事，就觉得我杀了梁栎吧。”<br>
+毫无破绽…<br>
+在已经过去的八个小时里，女孩可是说是没有被影响分毫，除了中途问警官要了一杯水之外。其余供词严谨，逻辑缜密。甚至还能跟自己谈笑风生。<br>
+<br>
+“长官，我们已经去查过了，实验室本身就没有装摄像头，另外教学楼路口的摄像头已经坏了很久了，学校一直没有找人维修…可以说，我们没有证据说明嫌疑人当晚出入实验室杀人……”警员的声音越来越小。<br>
+“天秤上没有任何的指纹，实验室内也没有提取到任何的血迹。”<br>
+……年轻的长官狠狠的皱了眉头。<br>
+“你，你，你，跟我去一趟嫌疑人的家里，其他人，再去实验室取证，每一个角落都不能放过。”<br>
+<br>
+“为什么一定要是这样的死亡方式。”方诗看着面前的男人。<br>
+第一次见面的时候应该是，干净，阳光，彬彬有礼的，优等生吧。<br>
+不过她无所谓，更甚，她甚至乐得看到梁栎的这种转变。隐秘的来说，他的转变是自己一手造成的，她能感受到快乐。<br>
+“因为…我一定会是那个能上天堂的人。”<br>
+男人咧开嘴笑了。<br>
+“你不要用担心，我马上就会走的。”<br>
+“我倒是不担心这个，不过你就这么笃定你能上天堂？”<br>
+下一秒，她被狠狠的扼住了喉咙。男人的手臂紧得像是钢圈。<br>
+还是太鲁莽。<br>
+喉咙里尽管已经发出了苛苛的错位声，女孩还是带着安抚性的微笑，有些艰难的伸手搭上了男人的手臂，“杀了我，没人替你，完成…愿望…”<br>
+喉咙上的钳制消失了。<br>
+女孩弯了眼角，“这才对啊，梁栎，我相信你”<br>
+“世界上没有人能再比我相信你。”<br>
+<br>
+“长官，前面这个就是嫌疑人的房间。”<br>
+他推开了房门，没有预想中的恐怖图画，也没有什么血腥的杀人海报。就像是一个女孩干干净净的卧室。<br>
+手下的警员已经开始翻找，年轻的长官环顾四周。<br>
+一幅在床头柜上的照片引起了他的注意。<br>
+那是一张合照，是女孩的家庭照。<br>
+照片上方诗站在中间，看上去大约六七岁的样子。身后是年轻的男女，估计是她的父母。值得注意的是，父亲的手上牵着一条绳，绳子的另一头拴着一条尖耳利齿的狼狗。不过看上去凶狠的狼狗此刻温驯的趴在女孩的脚边。<br>
+“哟，队长，发现什么了？”身边凑过来一个小警员。<br>
+“这狼狗，挺威风啊，不过看这年纪不小了吧，没想到嫌疑人家还养这个，队长，我也想养一只。”<br>
+警长没有搭话，只是目光沉沉的看着这张全家福，若有所思。<br>
+照片上的年幼的方诗，弯着眼睛，好像也在看他。<br>
+<br>
+——<br>
+“明天好像要下雨了，好像得连续下好几天。”<br>
+“可不是，那到时候搬东西要麻烦死了。看这个雨量，宿舍下面肯定要积水。”<br>
+“是呀，烦死了。”<br>
+“哎。方诗，那你今天晚上住宿舍吗，要我给你留门吗？”<br>
+“我吗？”<br>
+女孩从手机屏幕中短暂的抬起头，礼貌性的笑了笑，“不了，我这两天要赶一个期末实验。”<br>
+“哦哦哦好，那你小心点，今晚就要开始下雨了。”<br>
+“好。”女孩点点头，片刻，又认真的说了句，“谢谢。”<br>
+<br>
+（五）<br>
+（剩余拘传时间：12小时）<br>
+“这个啊，是我的全家福。”女孩看着桌子上的照片解释道。<br>
+“能给我讲讲，关于他们吗。”<br>
+女孩垂下了眼睛，可惜警长还是捕捉到了她的一丝奇异的情绪。<br>
+“左边的是我的父亲，右边的是我的母亲。”<br>
+“他们的职业是？”<br>
+“我的父亲曾经是个警员，母亲是个法医…不过他们现在比较忙…”<br>
+“他们已经去世了吧。”<br>
+警长显得有些不近人情的说到。不过尽管是这样，女孩也没有显现出一点恼怒情绪。<br>
+“是的警长先生…他们都死了。”<br>
+“那它呢，这条狗。它是什么东西。”<br>
+“它不是东西！”<br>
+女孩自己也察觉出了自己的失态，放缓了语气，“我的意思是，阿栗是父亲的警犬，从小跟我一起长大的。”<br>
+<br>
+一些东西一旦出现一丝裂缝之后，就会越扩越大……<br>
+<br>
+“这条狗现在呢，死了？”<br>
+“它…是的，阿栗已经在人间去世很多年了。那张合照的时候，它就很年迈了，有一次它不小心，掉进了水里……”<br>
+警长的有些玩味的笑了。<br>
+“小姐，你好像很尊敬这只狗。”<br>
+“因为……”女孩下意识的想抬手摸什么，但是又被她自己生生的克制住了。<br>
+“谢谢方小姐，我们这次的谈话很有意义。”<br>
+警长起身，欠身向女孩鞠躬，<br>
+“抱歉，刚才因为一些迫不得已的原因，用了唐突的语言，指责所在，请方小姐不要怪罪。”<br>
+女孩没有说话，复而垂下了头。<br>
+<br>
+——<br>
+“喂，我的可乐呢。”<br>
+女孩把一个塑料袋丢在了床上，梁栎自顾自的在里面翻。<br>
+“心情不错？”梁栎拧开了可乐，一股二氧化碳哧的一声冒出来。<br>
+“你也是？”<br>
+“对啊，你知道的吧，今天是谁的生日。”梁栎仰头灌了几口可乐，擦了擦嘴，有些狐疑的看了一眼瓶身，“你没买错吧，怎么有点甜。”<br>
+“可能改版了。”女孩也坐了下来，看着窗户外，<br>
+“天暗了。”<br>
+“要下雨了，我刚看了天气预报。”<br>
+“嗯。”女孩也不知道有没有听进去。于是两个人就坐在床边，看了一会天。<br>
+<br>
+“我一会出去一趟，一起吗？”<br>
+“难得你让我出门，我快被憋死了，去哪。”男人大概是真的太久没有出门了，说着起身拿外套。<br>
+“去学校，我有个实验要采集数据。”女孩看他随手放着的半瓶可乐。“不喝了？”<br>
+“喝喝喝。”梁栎嬉皮笑脸的凑到女孩跟前，“难得使唤你一次咯。”顺手把女孩拿在手里的可乐接过。<br>
+见女孩不搭话，倒是习惯了一样自娱自乐的说话，“你什么实验啊，上次教授那个培养皿的吗，就非得今天晚上，怪冷的。”<br>
+“白天我会让你出去吗？”女孩带上了帽子，把手揣进口袋。“最后一次了。”<br>
+“确实，过两天放假，再去实验室也不方便了，这学期最后一次实验咯。”<br>
+女孩打开了门，风灌进来的时候，顺势低下了头。<br>
+“嗯，最后一次实验了。”<br>
+<br>
+——<br>
+“方同学，能不能帮我一个忙？”<br>
+男人刻意缓和了神情，显得有点可怜。“收留我一个月吧，拜托。我可以给你付房租，也可以签合约的。”<br>
+“啊…”女孩好像有些局促，下意识的咬了咬嘴唇。<br>
+“你是犯了什么事吗……”<br>
+“没有，我没犯事，我就是，想做一个实验，但是，有一点危险。”男人的声音近乎诱哄。<br>
+“实验啊…”女孩若有所思。“这样的话，我有个要求…”<br>
+她仰起脸，直勾勾的看着在她面前刻意弯下腰的男人。<br>
+“让我观摩你的实验全程吧，嗯？天才，实验家？”<br>
+<br>
+（六）<br>
+（剩余拘传时间：7小时）<br>
+“你借着梁栎的实验，趁机观摩了他模拟杀人的全程。你在他对你的请求下于是可以光明正大的把他囚禁在你的家里，把他圈养成为你的实验对象。”<br>
+“他向你灌输的阿努比斯的神话，却没有想到其实你才是那个真正对于它近乎狂热的人。而如果我没有猜错的话，你对于阿努比斯神话的强烈的信念感是出于你对原生家庭的缺爱感，你的父亲青年殉职，你的母亲因此郁郁寡欢，轻生数次。我们在心里学上有一个专业术语，叫做童年逆境经历 ，通俗一点，你把家里那只一直陪伴着你的宠物当成了你的守护神，而梁栎则成为了你的第一个完美的祭献品——”<br>
+<br>
+“你觉得，我的实验怎么样？”<br>
+男人将食指摁在了天平的左侧托盘上，指针几乎没有颤动的停留在了左边。<br>
+“实验对象。”<br>
+“什么？”<br>
+“你的实验对象不够完美，导致了整个实验的劣质性。”女孩坐在一边的高椅子上。<br>
+“那你觉得，什么样的实验对象，才是完美的？”男人饶有兴趣的问。<br>
+“虔诚。——”<br>
+“要是完全的信仰着神的，足够优秀，干净，最重要的足够虔诚。虔诚的相信自己的心脏会是比羽毛轻的，所以才愿意把自己奉献给神明。”<br>
+<br>
+“你和梁栎，是什么关系。”<br>
+“……我跟他不熟。”<br>
+“你以为，他不知道可乐里装的是什么吗？”<br>
+<br>
+——<br>
+“那你打算怎么杀死实验对象。”<br>
+“很简单啊，一点乙二醇就好了，加到他的饮料里面。就像，加多了糖的可乐？”<br>
+“这也很明显吧……”女孩撇了撇嘴。“不够高明。”<br>
+“没有所谓的，你以为呢。我做这些只是为了我的方便。贡品应该会是心甘情愿被审判的。”<br>
+女孩哧的笑了，“这么傻吗？”<br>
+“对啊，这么傻啊。”<br>
+<br>
+“方小姐，你真的还不承认你谋杀梁栎的事实吗？”警官目光灼灼的盯着坐在对面低着头的女孩。语气里带着一些胜券在握。他自认为自己的逻辑和证据结合的无懈可击。<br>
+方诗缓缓的抬起来了头。<br>
+“那是一个下雨天。”<br>
+好像看不到警长对双面玻璃那头做的手势，也看不到探员准备好随时记录的样子。<br>
+“那是一个下雨天。”<br>
+<br>
+【方诗：回忆】<br>
+<br>
+那是一个下雨天。<br>
+这里已经很久很久没有下这么大的雨了。天幕像是被捅破了一样。<br>
+我打开了实验教室的门，把收起的雨伞架在了门口。<br>
+背对我的桌边坐着一个人，我叫了一声，梁栎。我知道他不会应我。<br>
+实验室很黑，我没有打开灯，昏暗的光线使我只能窥见他的轮廓。<br>
+<br>
+我把一排刀具摆在了地上。刀具不是崭新的，甚至可以算得上是旧。那是我母亲留下的刀具。她曾经试图使用这些刀具结束自己的生命。<br>
+可惜没有没有成功。<br>
+我动作堪称轻柔的把梁栎的身体放倒，他合着眼睛，平躺在地上，我伏下身体，去听他的心跳。<br>
+外面的雨没有丝毫的要停的趋势，“…就像是贝多芬的命运交响曲一样。”<br>
+没有人知道，我其实会拉小提琴。那是父亲的意思，当时因为父亲的强烈要求之下，年仅十岁的我便能拉出完成的命运交响曲。不过在父亲死后，我就很少碰了。<br>
+<br>
+居然现在的心境和十几年前的那一个雨夜有一些重合，就是那种，即将对于完成夙愿的使命感一样。<br>
+<br>
+刀锋很快，划开皮肤的时候是安静的。<br>
+但我能听到，那些隐秘的嘈杂的声音——血液在血管里流动的声音，刀尖划过骨骼酸涩的声音，器官搏动运作的声音，<br>
+还有心脏——有力的，一下一下跳动的声音。<br>
+我游刃有余的用刀划开一层层的皮层，脂肪层，沿着肌理的纹理，不能破坏。<br>
+<br>
+不易察觉的，我的手腕有一丝丝颤抖，我几乎能闻到他的心脏，新鲜的，赤红的心脏。<br>
+汩汩流出的血液堆积在他的身下，我隐忍的内心的，想要去舔舐的冲动<br>
+<br>
+——是祭品，不能亵渎的祭品。是给阿努比斯的祭品。<br>
+<br>
+太完美了。<br>
+安静到可怕的实验室和窗外的暴雨。<br>
+我将在这样美丽的夜晚，向我的神，祭奠上第一个完美的心脏。<br>
+<br>
+我伸手，从胸腔里，捧起了梁栎的心脏。<br>
+<br>
+他在我手里轻的就像羽毛一样。薄的地方撑起了细细的经络，满的几乎要在我手里破裂。<br>
+就像是附和着窗外倾盆的雨一样——雨水攀附这窗沿，激动的淌下来。我的心跳在加快，好像幼虫咬着我的心脏一样，这样激烈的感觉几乎要窒息，要是死在这个雨夜的话，大概，我会是最幸福的。<br>
+<br>
+我将那颗心脏缓缓的，放上早已准备好的天秤之上，天秤的右边，是一片白色的羽毛——<br>
+<br>
+一道闪电突然划破天际，化学实验室被照的雪亮，我的手颤了一下，大约是磕到了天秤的边缘，天秤上的指针开始疯狂的跳动——轰隆，雷声轰然而至。<br>
+<br>
+我像是突然感觉到了什么的扭头看原本躺在地上的梁栎的尸体，<br>
+可惜闪电过去了，我看到的只有一片黑暗。<br>
+<br>
+我松了口气，准备转头看向最后天秤的示数。<br>
+一道惨白的闪电刮破了实验室的黑暗，<br>
+<br>
+我没来得及收回的目光——<br>
+对上了梁栎直勾勾的眼睛……<br>
+<br>
+（七）<br>
+“尸体，对！梁栎的尸体呢！”<br>
+“报告长官，没有找到。”<br>
+“操。”警长忍不住骂了句脏话，狠狠的把烟头踩在了靴子下。他原本已经信誓旦旦的认为此案今天必然能破，终于可以回家了。<br>
+可没想到那个女孩在故弄玄虚的开头之后，只是讲了关于她家狼狗如何死去，她当时是怎么说来着，“那个雨天，我们家旁边池塘的地滑，它年纪大了，腿脚不方便，没看好它……”<br>
+真当警察是吃素的吗……<br>
+<br>
+“你们先去吃饭吧，我一会再过去。”警长不耐的摆摆手，示意手下的人先去吃饭。自己又从裤兜里掏出了一根烟点上，吸了一口。<br>
+他迫使自己冷静下来，再一遍分析从他第一次见女孩后说的每一句话。<br>
+<br>
+“我在家。”<br>
+“我父母晚上出去了，家里就我一个人。”<br>
+“这恰巧说明我心地善良，乐善好施，长官。”<br>
+“阿栗已经在人间去世很多年了。那张合照的时候，它就很年迈了。”<br>
+“是的警长先生…他们都死了。”<br>
+“我们家旁边池塘的地滑，它年纪大了，腿脚不方便，”<br>
+“……阿栗是父亲的警犬，从小跟我一起长大的。”<br>
+“那是一个下雨天……”<br>
+<br>
+他想起自己跟侧写师不久前的讨论——<br>
+“……要是把这样的情结转移到埃及的神上面，好像也未尝不可。那条狗呢，它是正常死亡的吗？”<br>
+“嫌疑人说是溺水的。”<br>
+“如果她真是把狼犬神化的话，应该会在家里或者附近有类似坟墓或者墓碑之类的，埃及神的话，更可能会贴近他们的习俗，比如说，木乃伊？”<br>
+“我的建议是，去她家附近再搜一下，找类似于储存木乃伊的条件空间，比如干燥，宽阔的房间，或许可以找到一些线索，当然只是猜测的话，我还不会写进报告里面……”<br>
+<br>
+“别吃饭了，你们几个，跟我再去一趟嫌疑人家里，再给痕检部打个电话，今天可能要加班了。”<br>
+<br>
+——<br>
+“为什么呢，为什么连你也想要离开我……”女孩子抬手，替温驯的狼犬合上了眼。<br>
+<br>
+“长官，神了，我们在嫌疑人的地下室里找到了一间南北通风的房间，里面真的摆着那条狼狗的木乃伊，你还别说，一点腐尸的味道都没有。”<br>
+“都这么多年了，要有也就只剩下骨头了。”他凉凉的瞥了一眼手下，快步朝地下室走去。<br>
+推开门，他就没由来的感受到一阵寒意。自己身处的是一个大约五十平方米的房间，房间通风，不但没有异味，反而是一些香料的味道。<br>
+房间的墙壁上贴着埃及古老的壁画，在不远处，摆放着一个方方正正的棺椁，棺椁很高，踩着下面的石基能恰好看到全貌。棺椁上方是阿努比斯的肖像，可能因为灯光的原因，在这种特异营造的昏黄的灯光下，显得阿努比斯有些过于的活灵活现了。<br>
+他转移开了视线。<br>
+“打开过棺椁了吗。”<br>
+“打开了，里面是一具木乃伊，呃，看这个形状，应该是嫌疑人的狼狗。我叫人拿去痕检？”<br>
+他点了点头。环顾四周。<br>
+不对，还是不对。这具木乃伊的发现是在情理之中的，上一次没有发现只是因为看到全家福就着急去验证。可是梁栎的尸体还是没有找到，尸体一日不找到，一日不能定她的罪名。<br>
+拘传时间应该不到五小时了…，<br>
+梁栎的尸体，究竟在哪里啊……<br>
+<br>
+（八）<br>
+（剩余拘传时间：四小时）<br>
+“长官又来听故事了？”新奇的是，他发现女孩多了一些明显的轻松感。<br>
+“嗯。”他随意的拉开椅子坐在她对面，“我这次想听，你和阿栗的故事。”<br>
+他说这句话的时候紧紧的盯着女孩。女孩没有太多的反应，“好的，长官。”<br>
+“他是由我父亲带来的，因为我的父亲是警察。我小的时候阿栗就一直陪着我了。”<br>
+“你跟它的关系很好？”<br>
+“我喜欢跟他一起玩，平常父母都比较忙，我一个人在家，就跟阿栗一起玩。”<br>
+“他会弄伤你吗？”<br>
+“不会，他很听话的，至少，他对我很好。”<br>
+“从小和你一起长大的话，应该年纪很大了吧？”<br>
+“十岁吧，或者九岁记不清了…”<br>
+<br>
+——我们利用分析木乃伊的骨骼闭合程度，估测这条狗死亡的时候大概是四岁左右。<br>
+<br>
+“它大概是在你几岁的时候，溺水的？”<br>
+“那时候还小，忘记了。”<br>
+“它死的时候，你应该很难过吧。”<br>
+“嗯。”<br>
+“那你还记得那一天的天气怎么样吗？”<br>
+“那天，是晴天。”<br>
+<br>
+——我们从木乃伊口鼻中提取了土壤样本，木乃伊死亡后应该是先接触了湿润的土壤。<br>
+<br>
+“在它死后，你掩埋了它？在哪里，你一个小姑娘，应该很困难吧。”<br>
+“我埋在池塘边了。是有点困难，不过，总得安葬他啊。”<br>
+<br>
+——不过奇怪的是，口鼻取出的土壤样本中并不包含嫌疑人住所旁边任何池塘土壤的样本。假设尸体真的是被溺死的话，那应该是很远的水源……<br>
+<br>
+“方小姐，它真的是溺死的吗？”<br>
+“是的。”<br>
+<br>
+——它真的是溺死的吗？我们在尸体脖颈处发现了勒痕…尸体生前是被掐死的，按照伤口程度来说，是被活活掐死的。<br>
+<br>
+“你真的记得它是怎么死的吗！”<br>
+<br>
+——当患者受到强烈的刺激时候，患者大脑为了保护患者会自动屏蔽掉这一段回忆，心理学上，我们成为选择性失忆。<br>
+<br>
+“你真的记得它是怎么死的吗？”<br>
+“…我…我记不清了”<br>
+“我猜，那大概是你十岁的那个夏天……”<br>
+<br>
+【警长：猜测】<br>
+那是你十岁的那个夏天。<br>
+距离你父亲的去世已经过去了几天，你和你的母亲刚刚送走了那些前来吊唁的父亲生前的同事。<br>
+六月份的天气很少下雨，不过今天的天气看起来格外的阴沉。<br>
+你的母亲说，看起来要下雨了。她支开了你，让你去跟阿栗玩一会。<br>
+父亲去世之后，母亲就变的很消沉，有时候又会歇斯底里的哭。你有些怕她，于是出门去跟阿栗玩耍。<br>
+阿栗很听话，对你也很温顺。你一点都不害怕它，反而，它更像是你的亲人一样。<br>
+<br>
+下午的时候，突然开始下雨。<br>
+你带着阿栗回家。你到了家里，呼唤母亲，却没有人应你。<br>
+你好像意识到了什么一样，跑上楼，母亲的房间。<br>
+母亲躺在床上——与其说是床上，纯白的床单已经被血浸透了。被割开的手腕就垂在床沿。<br>
+你奇怪的发现自己的第一反应，不是害怕，也不是难过。<br>
+“阿栗，走吧。”你招呼身后的狼犬。<br>
+可是它却窜到母亲的床边，冲着那个死去的女人开始狂吠。<br>
+忠犬护主。它是在干什么。<br>
+你是不是感受到一些匪夷所思，你的宠物，是不是想要让那个女人再醒过来。<br>
+“阿栗，回来！”<br>
+你是不是尝试严厉的叫它的名字，又或者，你甚至伸手去拽它。<br>
+<br>
+可是它不走啊，它就是那么忠心耿耿的守护在房子的女主人的尸体前面，它在哀嚎。<br>
+你在想什么呢当时，你是不是想要它听你的话，跟你走。<br>
+犬吠声越来越大，你从里面听到了什么，是痛苦吗，是不舍吗。对谁的啊，它怎么就这么爱她，它为什么不能听你的话……<br>
+你是不是疑惑，还是难过呢。<br>
+<br>
+接下来的事情是不是变得不受控制了，等你回过神来的时候，你看见了什么？<br>
+<br>
+——是阿栗的尸体吧。<br>
+它就倒在你的怀里，你的双手从它的脖子上缓缓的松开。它的头颅和脖颈只剩下薄薄的一层了，它的眼睛应该没有闭上吧。<br>
+它是不是看着你，哪怕死了，还是用湿漉漉的眼睛看着你。<br>
+阿栗怎么会恨你呢，所以它至死看向你的眼睛里，只有不解吧。<br>
+<br>
+雨应该很大，你才十岁，就抱着它的躯体，是不是很累啊。<br>
+<br>
+你原来应该是想把它掩埋了吧，但是当你把它放进泥土里的时候，你又觉得，怎么能把它埋在这么脏的地方。<br>
+你的手指又是血，又是泥土，你再抱住它想要给它清洗的时候，它的身体都硬了。<br>
+<br>
+浴缸吗，你给它放了一缸温水，然后把它放进去，给它冲刷身体。<br>
+你会不会有一点后悔呢，还是更多的是一种你也无法解释的隐秘的喜悦。<br>
+你脑子里只有一个想法，留下他。<br>
+<br>
+它看着你，可是它睁着眼睛看着你啊。<br>
+于是你抬手，替温驯的狼犬合上了眼。近乎温柔的对它说，<br>
+“永远不要离开我好吗，阿栗。”<br>
+<br>
+在一个契机之下，你发现了埃及木乃伊的保存方法。你想，世界上怎么会有这么完美的方法。你的家里有擦琴弦的松香，有母亲留下的刀具。<br>
+于是你把干净的它，取出了内脏和脑髓。没有绷带，就用干净的床单撕开，然后将它完整的缠好。<br>
+<br>
+这是你人生中最重要的时刻吧。在你把它放进了棺椁里。<br>
+十岁的你第一次尝到了得偿所愿的甜头。<br>
+当它死在你手掌的那一刻，它获得了永生。<br>
+<br>
+（剩余拘传时间：一小时）<br>
+“故事讲完了。”<br>
+“讲的不错。”女孩的脸上出现了一丝久违的轻松，“不过时间不多了。”<br>
+“长官，你找到指控我的证据了吗？”<br>
+<br>
+——<br>
+“最后一小时的时候，是最关键的。”<br>
+“你会怎么做？”女孩问。<br>
+“到了那个时候的话，我会装傻。”梁栎想了想，<br>
+“装傻？”<br>
+“对啊，就类似’我不知道’’我记不清了’之类的”<br>
+“这，有用吗。”看着女孩一言难尽的表情。“当然，要知道，警察他们不能严刑逼供。他们应该也会很着急吧。”<br>
+“喂，你在听我说话吗。”<br>
+“喂！”<br>
+<br>
+（九）<br>
+“那就这样放了她？她可是本案的重大嫌疑人！”<br>
+“嚷嚷什么，以什么名义逮捕她，以她家里找出来狗的尸体，还是我们那一堆没有证据的故事。”<br>
+“可是！”警员在年轻警长的注视下噤了声。<br>
+“等文件下来，就放她走吧。”警长捏了捏眉头，“哦对了还有那条狗，给她放回去吧，给她道个歉。”<br>
+他无视了手下欲言又止的眼神，摆了摆手，转身朝办公室走去。<br>
+<br>
+“方小姐，你可以离开了。”警员打开了房间的门，“请吧。”<br>
+“谢谢。”<br>
+女孩颇有礼貌的冲替她开门的警员点头示意。<br>
+<br>
+乍见的阳光明亮到有些刺眼，她一时有些恍惚，那个瓢泼的雨夜也不过两天前的事情，现在阳光亮的好像这一切都是梦境一样。<br>
+<br>
+“噔当——”<br>
+指纹锁打开了，女孩面无表情在鞋柜换上了拖鞋，然后径自走到卧室，拉上窗帘，把门反锁上了。<br>
+睡一觉吧。睡一觉就好了。她盯着床头柜上的合照，24小时没合眼的倦意上来了，比以前都快的，她很快的睡着了。<br>
+<br>
+“你相信我吗。”<br>
+“我相信。”<br>
+<br>
+（十）<br>
+“方教授，方教授外面有人找你。”急急火火的学生跑进来的时候几乎要撞到女人的身上。<br>
+“小心点。”穿着西装的女教授伸手虚扶了一把学生，“我出去看。”<br>
+<br>
+门口站着的人，方诗第一眼并没有认出来。她眯着眼辨认了片刻之后，笑了，“长官，好久不见。”<br>
+“方小姐，好久不见。”当年年轻自负的警长先生变化了很多，原本那一身锋利的正气被多年名利场浸润的几乎是看不见了。<br>
+“您，进去坐坐？”方诗试探的问道。不过这是出于礼节。当年的案件时隔多年，警局的档案里早已盖棺定论，如今想翻案是比登天还难的。<br>
+“不了，学校里不方便。”警长笑了笑，正色，“方小姐是我唐突了，我过几天便要离开这里了，可能以后都不会回来了，所以找到方小姐，想要了去一桩心事……”<br>
+他说的有些含糊，不过方诗听懂了。“这附近有一家日料不错，我请长官吃个便饭？”<br>
+“那就有劳了。”<br>
+<br>
+“当年我刚从警校毕业，自诩没有破不出的案子，没想到碰到方小姐的案子就栽了。”警长有些自嘲的笑笑。<br>
+“怎么会。”方诗斟了两杯茶，一杯推到了警长的面前。<br>
+“所以当年是方小姐杀的人吧。虽然没有证据但是，可能这是我的直觉…要是不是的话，您见笑了。”<br>
+“您还记得当时，我协助梁栎完成的第一个实验吗？”多年不曾叫出这个名字，方诗一时间有些恍惚。<br>
+“当然记得，当时警局里也有很多猜测，但是因为那个实验并没有涉及到真正的死亡，所以也就不了了之了。”<br>
+“其实，我怎么可能是杀人凶手啊…警长先生，我才是那个，他的试验品啊…”<br>
+<br>
+<br>
+【方诗：叙述】<br>
+他是怎么找到我的啊，我不知道。<br>
+我一直以为，只有我认识他，他不认识我。<br>
+<br>
+那天，他找到我。<br>
+「方同学，能不能帮我一个忙？」<br>
+我答应了他，并不是因为出于利益交换的目的。<br>
+——那样子的学长弯着腰带着笑的请求你的话，你也会拒绝不了的。<br>
+<br>
+一开始我想的只是，让他住进来。<br>
+直到有一天他对我说，「我一定会是那个能上天堂的人。」<br>
+我才发现，原来学长跟我是一类的人。<br>
+<br>
+他性格其实比表面看上去更加古怪，易怒，偏执，有时候会歇斯底里的赞颂神明。<br>
+但是这又有什么关系呢。<br>
+人，是充满七情六欲的，他这些偏激的情绪，只让他在我心里愈发接近完美。<br>
+<br>
+梁栎遵守了那个承诺，带我全程参观他为那个实验做的准备。<br>
+他很细心，每一次都会给我详细的解释他每一步的目的。<br>
+<br>
+从在杀人案出现后会发生的第一件事，<br>
+「当杀人案发生的时候，媒体就会借机制造的噱头，你不需要害怕。」<br>
+<br>
+到如何杀死祭献品，<br>
+「很简单啊，一点乙二醇就好了，加到他的饮料里面。就像，加多了糖的可乐？」<br>
+——“我们从死者身上发现了死者生前服用过过量的乙二醇。”<br>
+<br>
+从如何恰到好处的露出破绽，<br>
+「它不是东西！…我的意思是，阿栗是父亲的警犬，从小跟我一起长大的。」<br>
+—— “小姐，你好像很尊敬这只狗。”<br>
+<br>
+到如何面对警察的最后的盘问，<br>
+「到了那个时候的话，我会装傻。」<br>
+——“…我…我记不清了”<br>
+<br>
+学长讲的很详细，我从跟他在一起的时光中学到了很多。<br>
+有一天我跟他讲了我和阿栗的故事。<br>
+他的反应在我的意料之中，我终于可以完全确定，学长是跟我完全契合的。<br>
+<br>
+在接下来的相处时间里，他一遍一遍完善他的实验，我们熟悉了之后，他开始越来越多的问我的意见，这个实验几乎变成了我们两个人的成果。<br>
+<br>
+终于有一天，学长完成了一次完美的犯罪，他问我怎么样，我说「实验对象」。<br>
+<br>
+「那你觉得，什么样的实验对象，才是完美的？」<br>
+「虔诚。——」<br>
+「要是完全的信仰着神的，足够优秀，干净，最重要的足够虔诚。虔诚的相信自己的心脏会是比羽毛轻的，所以才愿意把自己奉献给神明。」<br>
+<br>
+我有些沮丧了，学长应该从哪里找这样的实验对象呢，我很感激他，我想报答他。学长看出来我的沮丧，他说，<br>
+「你相信我吗。」<br>
+我相信他。<br>
+<br>
+（十一）<br>
+“所以你的意思是，是梁栎诱导你杀死了他，为了…让你完成…你的愿望？”警长有些匪夷所思的问。“我冒昧的问一句，你们是男女朋友吗？”<br>
+“不是啊，警长，我跟梁栎不熟。”方诗呷了一口茶，“已经是超越了爱情的关系呢……”<br>
+“原来是这样…”警官长长的叹了口气，再次看向女人的神情都变的带着一些可怜起来。<br>
+方诗失笑，“不用这么看我的，长官。”<br>
+“哎，谢谢你啊不管怎么说方小姐，了却了我的一项心愿。”警长摆了摆手，示意服务员结了饭前。<br>
+
+回到熟悉的家里，方诗径自去了地下室。<br>
+这么多年过去，从当时那个大学还没毕业的学生到现在小有名气的教授，方诗从未想过搬家，甚至连地下室的装修还是丝毫未变，供奉着阿努比斯神的肖像依旧栩栩如生。<br>
+<br>
+她平静跪坐在棺椁前，想起刚刚老警长问她的一个问题。<br>
+——“那你认为凶手是怎么处理梁栎的尸体的”<br>
+<br>
+——<br>
+“最后一个问题，就是最关键的问题，应该如何处理尸体呢？”<br>
+“天葬？沉河？”<br>
+“不不不…”男人故弄玄虚的笑了，摇了摇手指，“最危险的地方就是最安全的地方，当然是保存起来咯！”<br>
+“保存到哪里？荒郊野外吗？”女孩不解的皱眉。<br>
+“当然不是，那样太引人注目了，当然是要带到离神最近的地方，用最接近神的方法，保存下来。”<br>
+<br>
+方诗踩上了棺椁的石基，打开了棺椁的盖子。随着石头移动的酸牙咯吱声，棺椁里面逐渐窥得全貌。她有些费力的把盖子摆在一边，伸手去够里面的东西。<br>
+不多时，狼犬的木乃伊被方诗搬了出来，而她只是随意的将木乃伊放在了石盖上。<br>
+她又弯腰，这回更加吃力了，东西好像很大，她脸上见汗了，才把东西搬了出来。<br>
+<br>
+被白布缠绕的长条形物件被她抱了出来，她这时的神色开始变得认真，小心翼翼的开始拆物件身上的绷带。<br>
+一圈一圈。<br>
+被褪下来的绷带成色很新，看得出是被定期更换过的。<br>
+她拆的动作也很熟练，不多时，一具人形的木乃伊便被拆出来暴露在空气当中。嶙峋的骨头，看得出尸体生前似乎很健康，于是连死后的骨头都是白森森的。白骨心脏的附近有细微的划痕，不过并不明显。<br>
+<br>
+方诗看到了骨头像是舒了口气，就这样半跪着抱着这具白骨，也不说话。<br>
+半晌，她笑了笑，<br>
+“梁栎，明天就是6月29号了。”<br>
+<br>
+——<br>
+“你相信人会重生吗，那些心脏比羽毛轻的人。”女孩状似不经意的问。<br>
+“相信啊，为什么不相信。”<br>
+“那你说，人们都会在什么时候重生呢？”<br>
+“它的生日吧，那会是一个轮回，只有在它的生日死去的人，才能在下一个它的生日重生。”男人枕着手臂，神色惬意的仰起了头。<br>
+“被挖去的心脏，会被神明再次赋予给亡者，那样子的话，才是真正的涅槃重生啊……”<br>
+<br>
+“你会回来的吧…”女人的脸上出现了一种近乎狂热的神往。<br>
+“我们是完全契合的啊……”<br>
+<br>
+从他看着自己的眼睛喝下了那瓶可乐开始；从他扼死陪伴自己四年的狼犬，将它精心的包裹起来开始；从他教会自己如何编造一个个真真假假的故事开始；从他握着自己的手，剖开了他自己的心脏开始；还是更早一点呢，自己溜出父亲的葬礼，在那个雨夜听到了少年拉奏的命运交响曲开始……<br>
+<br>
+“梁栎，明天，会下雨吗……”<br>
+
+                        </h6>
+                    </div>                    
+                </div>
+                <div class="body_right_center" style="position: relative ;" >
+                    <div class="english">
+                        <blockquote style="width: 50px; height: 50px; position: absolute; top: 5px; right: 5px; z-index: 12; "></blockquote>
+                        <img src="assets/img/中英文 中文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; " class="img1" >
+                        <img src="assets/img/英文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; display: none; " class="img2" >
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: block;" >                           
+                            We talked so late that day, until the candles lost their voices and the golden blood flowed<br>
+                            He rolled me flat on the carpet and I was like a piece of non-woven fabric<br>
+                            He kissed my belly button, kissed my belly, I arched my waist like a bow <br>
+                            He is my strings<br>
+                            rang all night<br>
+                            <br><br>
+                            那天我们聊到很晚，到蜡烛失声，流淌金色的血液<br>
+                            他将我碾平展开在地毯上 我像是一片无纺布一样 <br>
+                            他吻我的肚脐 吻我的小腹 我拱起了腰 像是一把弓 <br>
+                            他就是我的琴弦<br>
+                            拉响了一夜<br>
+                            <br>
+                        </h6>  
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            The alcohol delays some of the thoughts so everything seems to be in slow motion<br>
+                            I've seen the wind out of the car window pour in and the color of the lamp is diluted into long strips of oil painting<br>
+                            Then I yelled out my friend's name<br>
+                            The wind is going to blow my hat open<br>
+                            It was as if all my life I had sought a moment of freedom;<br>
+                            I am banished like an autumn wind<br>
+                            <br><br>
+                            酒精延迟了一些思想 所以一切都像是慢动作一样 <br>
+                            我看过车窗外面的风倒灌进来 灯的颜色被稀释成长条的油画 <br>
+                            然后我对着外面大喊我朋友的名字<br> 
+                            风要把我的帽子吹开<br> 
+                            就好像我一生都在追求自由的时刻；<br> 
+                            我被像来自秋天的风放逐了<br>
+                            <br>
+                        </h6>   
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            I don't know how late, midnight or early morning<br>
+                            All the sounds are silent, there is no wind to understand our private feelings<br>
+                            I am folded;<br>
+                            Curled toes, folded knees or bowed waist<br>
+                            If he's a murderer, I'm his booty<br>
+                            Aggression goes through fire and water like a tsunami<br>
+                            He opened the skylight—<br>
+                            the moon is watching us<br>
+                            I ignited and extinguished, turned into withered wax tears<br>
+                            he blows me out<br>
+                            refuse to keep me until dawn.<br>
+                            <br><br>
+                            我不知道是多晚 午夜或者凌晨<br>
+                            万籁俱寂下 没有风理会我们的私情<br>
+                            我被折叠；<br>
+                            蜷起的脚趾 折起的膝盖或者弓起的腰<br>
+                            要是他是杀人犯 我就是他的战利品<br>
+                            侵略赴汤蹈火 像是海啸<br>
+                            他打开了天窗——<br>
+                            月亮在看我们<br>
+                            我点燃又熄灭 化成了枯槁的蜡泪<br>
+                            他吹熄我 <br>
+                            不肯留我到天明。<br>
+                            <br>
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            She is a poet I have never met.<br>
+                            She writes about rivers and seas, about mountains and ridges, about the breaking of dawn, about the sky full of stars<br>
+                            <br><br>
                             她是我素未谋面的诗人。<br>
                             她写江海 写山和山脊 写破晓时分 写繁星满天<br>
                             <br>
-                            死于青春——
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            die of youth--<br>
+                            Died while I was in full bloom; so the cherry blossoms covered my body<br>
+                            <br><br>
+                            死于青春——<br>
                             在我盛放的时候死去 ；于是樱花砌满了我的全身<br>
                             <br>
+                        </h6>
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            Everyone expects you to be as sharp as you can, expect you to take the high ground and dance<br>
+                            I'm different, I hope you will be a good citizen in your inch, be a coward in the face of danger<br>
+                            No need to steal the show<br>
+                            Leave it to me, don't leave it to fate<br>
+                            <br><br>
                             人人都盼你锋芒尽出 盼你夺了高地起舞<br>
                             我不一样  我盼你在你的方寸做良民 在险阻面前当个懦夫<br>
-                            无需抢占风头<br> 
+                            无需抢占风头<br>
                             交给我 别交给命数<br>
                             <br>
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            I sit in a rotten classroom reading living poetry like a paradox<br>
+                            <br><br>
                             我坐在腐朽的教室里读活生生的诗 像悖论<br>
                             <br>
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            The wind can be everything, the drum and the waves, and my breast<br>
+                            <br><br>
                             风可以作万物 作鼓作浪 作我的胸脯<br>
                             <br>
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            I was caught by something - the palms scrambling to get out of the gap. They pulled me back from the edge, but I don't want to go back<br>
+                            The teacher's hand has calluses left from holding a pen for many years. When I opened my face, I saw a bottle of white roses that had fallen.<br>
+                            <br><br>
                             我被一些东西抓住——那些从间隙里争先恐后钻出来的手掌。他们把我从边缘往回拽 可我不想回去<br>
                             老师的手上有常年握笔留下来的茧 我张着脸的时候看见了一瓶已经凋落的白玫瑰<br>
                             <br>
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            I am the swallow！in the cold nest named you<br>
+                            The song I sing for you is a girl's soft woven bag<br>
+                            No wind, no wind tonight<br>
+                            Just the soft fluff on my belly and the throbbing heartbeat<br>
+                            <br><br>
                             我是燕子啊 栖息在名为你的冰冷的巢臼里<br>
                             我为你唱的歌 是女孩柔软的编织袋<br>
-                            没有风 今夜没有风<br> 
+                            没有风 今夜没有风 <br>
                             只有我肚子上柔软的绒毛和搏动的心跳<br>
                             <br>
-                            最爱你的时候 我是鹧鸪 我是九死一生的猫 <br>
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            When I love you the most, I'm a partridge, I'm a cat that survives nine deaths<br>
+                            I am the girdle of the wilderness, I am the wilting wind, hug you in the most primitive way<br>
+                            <br><br>
+                            最爱你的时候 我是鹧鸪 我是九死一生的猫<br>
                             我是原野的腰封 我是萎顿的风 用最原始的方式拥抱你<br>
                             <br>
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            Do you like that name<br>
+                            Like it. It sounded ripe, dry, pale yellow sun and heavy straw<br>
+                            Do you like that name<br>
+                            Narrow and broad, like smooth flowing clear eyes and endless buds growing<br>
+                            <br><br>
                             你喜欢这个名字吗<br>
                             喜欢 听起来就 熟透了 干燥的 浅黄色的太阳和 沉甸甸的稻草<br>
                             你喜欢这个名字吗<br>
                             又狭窄又宽阔的 像是平和流淌的澄澈的眼睛和生生不息的胞芽日益增长<br>
                             <br>
-                            所有的川流在我面前构成的一幅紊乱的画 我被困在里面 像要被冰冷的风给点燃<br> 
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            All the streams formed a disordered picture before me. I was trapped inside, like I was about to be set on fire by the cold wind<br>
+                            I felt a sudden sad, as if I hadn't seen the sunset for a long time<br>
+                            <br><br>
+                            所有的川流在我面前构成的一幅紊乱的画 我被困在里面 像要被冰冷的风给点燃 <br>
                             突然觉得有点难过 好像很久没有看到日落<br> 
                             <br>
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            My back was burned almost like grew wings through the cracks<br>
+                            <br><br>
                             我的后背滚烫 几乎要从缝隙里长出翅膀<br>
                             <br>
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            They are charming in their forties and fifties, pale sculptures,<br>
+                            And then they die,<br>
+                            To die.<br>
+                            <br><br>
                             她们迷人的是四五十岁的样子，如同惨白的雕塑，<br> 
-                            然后她们死去，<br> 
+                            然后她们死去，<br>
                             死去。<br>
                             <br>
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            Don't stick to a boxy room if you're free<br>
+                            I always felt that the room was a cage,<br>
+                            God felt that human thought and culture should not spread like this,<br>
+                            So they keep people from moving；<br>
+                            Have to run naked on the lawn with fingers and the soles of feet soft and stuck in the mud<br>
+                            Standing in the tuyere every hair is scraped back<br>
+                            My eyelids will drop and sure enough sweet alcohol is a trap<br>
+                            There are traps everywhere. There are traps everywhere<br>
+                            <br><br>
                             要是做自由的姿态 就不要拘在四四方方的房间<br>
                             我始终觉得房间是牢笼，<br>
                             上帝觉得人类思想文化不应该如此蔓延，<br>
@@ -873,78 +1592,231 @@
                             我的眼皮要掉下去 果然甜蜜的酒精也是陷阱——<br>
                             到处都是陷阱 都是陷阱<br>
                             <br>
-                            灰色的土地埋没他的脚掌<br>
-                            他就站在，世纪的分割线上沉默<br>
-                            我问他 问他为什么今天的快报只卖一毛八；<br>
-                            <br>
-                            好像是鸣笛声惊动了他，他转过头<br>
-                            风衣像是被割裂的死者的唇部<br>
-                            他拢著风口和自己的脖颈<br>
-                            <br>
-                            “你是我见过最美丽的姑娘”<br>
-                            他用破烂的灵魂夸赞另一个灵魂<br>
-                            ——这他想在最后的世纪留下一些属于他的东西<br>
-                            我沉默了。<br>
-                            <br>
-                            茨冈人的街上没有行人，没有人愿意留下。<br>
-                            我说：要么，你跟我走吧。<br>
-                            去老死在一个没有风的地方。<br>
-                            <br>
-                        </h6>
-                    </div>                    
-                </div>
-                <div class="body_right_center" style="position: relative ;" >
-                    <div class="english">
+                        </h6> 
+                        <h6 class="short" style="margin: 30px 10px 0 30px; display: none;">
+                            The gray earth covered the soles of his feet<br>
+He stands silent on the dividing line of the century<br>
+I asked him why the dispatch was only eighteen cents today;<br>
+<br>
+It was as if the whistle had alerted him and he turned his head<br>
+The trench coat looks like the severed lips of a victim<br>
+He closed the air vent and his neck<br>
+<br>
+"You're the most beautiful girl I've ever seen."<br>
+He used a broken soul to praise another soul<br>
+He wanted to leave something of his own in the last century<br>
+I was silent.<br>
+<br>
+There were no people in the streets of the Zigonians, no one wanted to stay.<br>
+I said: or, you go with me.<br>
+To die of old age in a place where there's no wind.<br>
+<br><br>
+灰色的土地埋没他的脚掌<br>
+他就站在，世纪的分割线上沉默<br>
+我问他 问他为什么今天的快报只卖一毛八；<br>
+<br>
+好像是鸣笛声惊动了他，他转过头<br>
+风衣像是被割裂的死者的唇部<br>
+他拢著风口和自己的脖颈<br>
+<br>
+“你是我见过最美丽的姑娘”<br>
+他用破烂的灵魂夸赞另一个灵魂<br>
+——这他想在最后的世纪留下一些属于他的东西<br>
+我沉默了。<br>
+
+茨冈人的街上没有行人，没有人愿意留下。<br>
+我说：要么，你跟我走吧。<br>
+去老死在一个没有风的地方。<br>
+                        </h6>                                                                               
+                    </div>
+                    <!-- <div class="short_pages">
+                        <blockquote style="width: 50px; height: 50px; position: absolute; top: 5px; right: 5px; z-index: 12; "></blockquote>
                         <img src="assets/img/中英文 中文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; " class="img1" >
                         <img src="assets/img/英文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; display: none; " class="img2" >
-                        <h6 style="margin: 30px 10px 0 30px;">
-                            123in the light of the sun, is there anyone<br/>
-
-oh it has begun<br/>
-
-oh dear you look so lost<br/>
-
-eyes are red and tears are shed<br/>
-
-this world you must've crossed<br/>
-
-just said, you don't know me, you don't even care<br/>
-
-you said, you don't know me, you don't wear my chains<br/>
-
-essential and appealed<br/>
-
-carry all your thoughts across an open field<br/>
-
-when flowers gaze at you<br/>
-
-they're not the only ones who cry when they see you<br/>
-
-you said<br/>
-
-you don't know me, you don't even care<br/>
-
-oh,you said, you don't know me, you don't wear my chains<br/>
-
-she said I think I'll go to Boston<br/>
-
-I think I'll start a new life<br/>
-
-I think I'll start it over<br/>
-
-no one knows my name<br/>
-
-I'll get out of California<br/>
-
-I'm tired of the weather<br/>
-
-I think I'll get a lover and fly out to Spain<br/>
-
-I think I'll go to Boston<br/>
-
-
-                        </h6>                          
+                        <h6 style="margin: 30px 10px 0 30px;">                           
+                            We talked so late that day, until the candles lost their voices and the golden blood flowed<br>
+                            He rolled me flat on the carpet and I was like a piece of non-woven fabric<br>
+                            He kissed my belly button, kissed my belly, I arched my waist like a bow <br>
+                            He is my strings<br>
+                            rang all night<br>
+                            那天我们聊到很晚，到蜡烛失声，流淌金色的血液<br>
+                            他将我碾平展开在地毯上 我像是一片无纺布一样 <br>
+                            他吻我的肚脐 吻我的小腹 我拱起了腰 像是一把弓 <br>
+                            他就是我的琴弦<br>
+                            拉响了一夜<br>
+                            <br>
+                        </h6>
                     </div>
+                    <div class="short_pages">
+                        <blockquote style="width: 50px; height: 50px; position: absolute; top: 5px; right: 5px; z-index: 12; "></blockquote>
+                        <img src="assets/img/中英文 中文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; " class="img1" >
+                        <img src="assets/img/英文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; display: none; " class="img2" >
+                        <h6 style="margin: 30px 10px 0 30px;">                           
+                            The alcohol delays some of the thoughts so everything seems to be in slow motion<br>
+                            I've seen the wind out of the car window pour in and the color of the lamp is diluted into long strips of oil painting<br>
+                            Then I yelled out my friend's name<br>
+                            The wind is going to blow my hat open<br>
+                            It was as if all my life I had sought a moment of freedom;<br>
+                            I am banished like an autumn wind<br>
+                            酒精延迟了一些思想 所以一切都像是慢动作一样 <br>
+                            我看过车窗外面的风倒灌进来 灯的颜色被稀释成长条的油画 <br>
+                            然后我对着外面大喊我朋友的名字<br> 
+                            风要把我的帽子吹开<br> 
+                            就好像我一生都在追求自由的时刻；<br> 
+                            我被像来自秋天的风放逐了<br>
+                            <br>
+                        </h6>
+                    </div>
+                    <div class="short_pages">
+                        <blockquote style="width: 50px; height: 50px; position: absolute; top: 5px; right: 5px; z-index: 12; "></blockquote>
+                        <img src="assets/img/中英文 中文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; " class="img1" >
+                        <img src="assets/img/英文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; display: none; " class="img2" >
+                        <h6 style="margin: 30px 10px 0 30px;">                           
+I don't know how late, midnight or early morning<br>
+All the sounds are silent, there is no wind to understand our private feelings<br>
+I am folded;<br>
+Curled toes, folded knees or bowed waist<br>
+If he's a murderer, I'm his booty<br>
+Aggression goes through fire and water like a tsunami<br>
+He opened the skylight—<br>
+the moon is watching us<br>
+I ignited and extinguished, turned into withered wax tears<br>
+he blows me out<br>
+refuse to keep me until dawn.<br>
+我不知道是多晚 午夜或者凌晨<br>
+万籁俱寂下 没有风理会我们的私情<br>
+我被折叠；<br>
+蜷起的脚趾 折起的膝盖或者弓起的腰<br>
+要是他是杀人犯 我就是他的战利品<br>
+侵略赴汤蹈火 像是海啸<br>
+他打开了天窗——<br>
+月亮在看我们<br>
+我点燃又熄灭 化成了枯槁的蜡泪<br>
+他吹熄我 <br>
+不肯留我到天明。<br>
+<br>
+<br>
+She is a poet I have never met.<br>
+She writes about rivers and seas, about mountains and ridges, about the breaking of dawn, about the sky full of stars<br>
+她是我素未谋面的诗人。<br>
+她写江海 写山和山脊 写破晓时分 写繁星满天<br>
+<br>
+die of youth--<br>
+Died while I was in full bloom; so the cherry blossoms covered my body<br>
+死于青春——<br>
+在我盛放的时候死去 ；于是樱花砌满了我的全身<br>
+<br>
+Everyone expects you to be as sharp as you can, expect you to take the high ground and dance<br>
+I'm different, I hope you will be a good citizen in your inch, be a coward in the face of danger<br>
+No need to steal the show<br>
+Leave it to me, don't leave it to fate<br>
+人人都盼你锋芒尽出 盼你夺了高地起舞<br>
+我不一样  我盼你在你的方寸做良民 在险阻面前当个懦夫<br>
+无需抢占风头<br>
+交给我 别交给命数<br>
+<br>
+I sit in a rotten classroom reading living poetry like a paradox<br>
+我坐在腐朽的教室里读活生生的诗 像悖论<br>
+<br>
+The wind can be everything, the drum and the waves, and my breast<br>
+风可以作万物 作鼓作浪 作我的胸脯<br>
+<br>
+I was caught by something - the palms scrambling to get out of the gap. They pulled me back from the edge, but I don't want to go back<br>
+The teacher's hand has calluses left from holding a pen for many years. When I opened my face, I saw a bottle of white roses that had fallen.<br>
+我被一些东西抓住——那些从间隙里争先恐后钻出来的手掌。他们把我从边缘往回拽 可我不想回去<br>
+老师的手上有常年握笔留下来的茧 我张着脸的时候看见了一瓶已经凋落的白玫瑰<br>
+<br>
+I am the swallow！in the cold nest named you<br>
+The song I sing for you is a girl's soft woven bag<br>
+No wind, no wind tonight<br>
+Just the soft fluff on my belly and the throbbing heartbeat<br>
+我是燕子啊 栖息在名为你的冰冷的巢臼里<br>
+我为你唱的歌 是女孩柔软的编织袋<br>
+没有风 今夜没有风 <br>
+只有我肚子上柔软的绒毛和搏动的心跳<br>
+<br>
+When I love you the most, I'm a partridge, I'm a cat that survives nine deaths<br>
+I am the girdle of the wilderness, I am the wilting wind, hug you in the most primitive way<br>
+最爱你的时候 我是鹧鸪 我是九死一生的猫<br>
+我是原野的腰封 我是萎顿的风 用最原始的方式拥抱你<br>
+<br>
+Do you like that name<br>
+Like it. It sounded ripe, dry, pale yellow sun and heavy straw<br>
+Do you like that name<br>
+Narrow and broad, like smooth flowing clear eyes and endless buds growing<br>
+你喜欢这个名字吗<br>
+喜欢 听起来就 熟透了 干燥的 浅黄色的太阳和 沉甸甸的稻草<br>
+你喜欢这个名字吗<br>
+又狭窄又宽阔的 像是平和流淌的澄澈的眼睛和生生不息的胞芽日益增长<br>
+<br>
+All the streams formed a disordered picture before me. I was trapped inside, like I was about to be set on fire by the cold wind<br>
+I felt a sudden sad, as if I hadn't seen the sunset for a long time<br>
+所有的川流在我面前构成的一幅紊乱的画 我被困在里面 像要被冰冷的风给点燃 <br>
+突然觉得有点难过 好像很久没有看到日落<br> 
+<br>
+My back was burned almost like grew wings through the cracks<br>
+我的后背滚烫 几乎要从缝隙里长出翅膀<br>
+<br>
+They are charming in their forties and fifties, pale sculptures,<br>
+And then they die,<br>
+To die.<br>
+她们迷人的是四五十岁的样子，如同惨白的雕塑，<br> 
+然后她们死去，<br>
+死去。<br>
+<br>
+Don't stick to a boxy room if you're free<br>
+I always felt that the room was a cage,<br>
+God felt that human thought and culture should not spread like this,<br>
+So they keep people from moving；<br>
+Have to run naked on the lawn with fingers and the soles of feet soft and stuck in the mud<br>
+Standing in the tuyere every hair is scraped back<br>
+My eyelids will drop and sure enough sweet alcohol is a trap<br>
+There are traps everywhere. There are traps everywhere<br>
+要是做自由的姿态 就不要拘在四四方方的房间<br>
+我始终觉得房间是牢笼，<br>
+上帝觉得人类思想文化不应该如此蔓延，<br>
+于是让人们不能居无定所<br>
+要赤身裸体奔跑在草坪上 手指和脚掌都是柔软的 陷入泥巴里<br>
+站在风口 每一根汗毛被刮向后面<br>
+我的眼皮要掉下去 果然甜蜜的酒精也是陷阱——<br>
+到处都是陷阱 都是陷阱<br>
+<br>
+The gray earth covered the soles of his feet<br>
+He stands silent on the dividing line of the century<br>
+I asked him why the dispatch was only eighteen cents today;<br>
+<br>
+It was as if the whistle had alerted him and he turned his head<br>
+The trench coat looks like the severed lips of a victim<br>
+He closed the air vent and his neck<br>
+<br>
+"You're the most beautiful girl I've ever seen."<br>
+He used a broken soul to praise another soul<br>
+He wanted to leave something of his own in the last century<br>
+I was silent.<br>
+<br>
+There were no people in the streets of the Zigonians, no one wanted to stay.<br>
+I said: or, you go with me.<br>
+To die of old age in a place where there's no wind.<br>
+<br>
+灰色的土地埋没他的脚掌<br>
+他就站在，世纪的分割线上沉默<br>
+我问他 问他为什么今天的快报只卖一毛八；<br>
+<br>
+好像是鸣笛声惊动了他，他转过头<br>
+风衣像是被割裂的死者的唇部<br>
+他拢著风口和自己的脖颈<br>
+<br>
+“你是我见过最美丽的姑娘”<br>
+他用破烂的灵魂夸赞另一个灵魂<br>
+——这他想在最后的世纪留下一些属于他的东西<br>
+我沉默了。<br>
+
+茨冈人的街上没有行人，没有人愿意留下。<br>
+我说：要么，你跟我走吧。<br>
+去老死在一个没有风的地方。<br>
+
+                        </h6>
+                    </div> -->
                     <div class="chinese" >
                         <h6 style="margin: 30px 10px 0 30px;">
                             在那耀眼的阳光下，有人吗?<br/>
@@ -959,75 +1831,7 @@ I think I'll go to Boston<br/>
                             穿过那一大片无垠草原...<br/>
 
                         </h6>
-                    </div>                    
-                </div>
-                <div class="body_right_center" style="position: relative ;" >
-                    <div class="english">
-                        <img src="assets/img/中英文 中文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; " class="img1" >
-                        <img src="assets/img/英文.png" alt="" style="width: 30px; height: 26px; position: absolute; top: 5px; right: 5px; z-index: 10; display: none; " class="img2" >
-                        <h6 style="margin: 30px 10px 0 30px;">
-                            123in the light of the sun, is there anyone<br/>
-
-oh it has begun<br/>
-
-oh dear you look so lost<br/>
-
-eyes are red and tears are shed<br/>
-
-this world you must've crossed<br/>
-
-just said, you don't know me, you don't even care<br/>
-
-you said, you don't know me, you don't wear my chains<br/>
-
-essential and appealed<br/>
-
-carry all your thoughts across an open field<br/>
-
-when flowers gaze at you<br/>
-
-they're not the only ones who cry when they see you<br/>
-
-you said<br/>
-
-you don't know me, you don't even care<br/>
-
-oh,you said, you don't know me, you don't wear my chains<br/>
-
-she said I think I'll go to Boston<br/>
-
-I think I'll start a new life<br/>
-
-I think I'll start it over<br/>
-
-no one knows my name<br/>
-
-I'll get out of California<br/>
-
-I'm tired of the weather<br/>
-
-I think I'll get a lover and fly out to Spain<br/>
-
-I think I'll go to Boston<br/>
-
-
-                        </h6>                          
-                    </div>
-                    <div class="chinese" >
-                        <h6 style="margin: 30px 10px 0 30px;">
-                            在那耀眼的阳光下，有人吗?<br/>
-                            喔..这一切都将开始<br/>
-                            喔..，你看起来那么失落<br/>
-                            眼睛红红的，泪也流了下来<br/>
-                            你说，日子终究还是要过下去的<br/>
-                            你不了解我，甚至毫不关心<br/>
-                            你不了解我，不能容忍我<br/>
-                            总有一天会实现的<br/>
-                            带著你所有的想像<br/>
-                            穿过那一大片无垠草原...<br/>
-
-                        </h6>
-                    </div>                    
+                    </div>                   
                 </div>
                 <div class="data_show_show">
                     <div class="img_show_box10086">
@@ -1035,10 +1839,10 @@ I think I'll go to Boston<br/>
                             <img src="assets/img/619.jpg" alt="" style="width: 400px;border-radius: 12px; ">
                         </div>
                         <div class="img_show_box10086_box">
-                            <img src="assets/img/621.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                            <img src="assets/img/6210.jpg" alt="" style="width: 400px;border-radius: 12px; ">
                         </div>
                         <div class="img_show_box10086_box">
-                            <img src="assets/img/705.jpg" alt="" style="width: 400px;border-radius: 12px; ">
+                            <img src="assets/img/7050.jpg" alt="" style="width: 400px;border-radius: 12px; ">
                         </div>
                         <div class="img_show_box10086_box">
                             <img src="assets/img/712.jpg" alt="" style="width: 400px;border-radius: 12px; ">
@@ -1136,8 +1940,8 @@ I think I'll go to Boston<br/>
         let as=document.querySelector('.xhs_conter_top').querySelectorAll('a')
         let divs=document.querySelector('.xhs_conter_center').querySelectorAll('div')  
         let show=document.querySelector('.data_show_show')
+        let h3=document.querySelector('.h3')
         for (let i=0;i<as.length;i++) {
-            // 开始给5个小li，设置索引号
             as[i].setAttribute('index', i);
             as[i].onclick = function () {
                 //1.上面的选项卡模块，点击某一个当前这一个底色是红色，其余不变（排他思想），修改类名的方式
@@ -1164,7 +1968,9 @@ I think I'll go to Boston<br/>
         let imgs2=document.querySelector('.body_right').querySelectorAll('.img2')
         let englishs=document.querySelector('.body_right').querySelectorAll('.english')
         let chineses=document.querySelector('.body_right').querySelectorAll('.chinese')
-        let h3=document.querySelector('.h3')
+        let newAdd=document.querySelector('.newAdd_demand')
+        let ulas=newAdd.querySelectorAll('a')
+        let shorts=document.querySelectorAll('.short')
         for (let i=0;i<ps.length;i++) {
             ps[i].setAttribute('index', i);
             imgs[i].setAttribute('index', i);
@@ -1176,12 +1982,21 @@ I think I'll go to Boston<br/>
                 }
                 this.className='actives'
                 let index =this.getAttribute('index')
+                //控制展现短篇的列表
+                if (index==2 ) {
+                        newAdd.style.display='block'
+                    } else if (index==0 || index==1) {
+                        newAdd.style.display='none'
+                    }
                 for (let j=0;j<ts.length;j++) {
                     ts[j].style.display='none'
-
-
                 }
                 ts[index].style.display='block'
+                // if (index==2 ) {
+                //         ts[index].style.display='none'
+                //     } else if (index==0 || index==1) {
+                //         ts[index].style.display='block'
+                //     }
                 englishs[index].className='english'
                 chineses[index].style.display='none'
                 imgs2[index].style.display='none'
@@ -1211,6 +2026,25 @@ I think I'll go to Boston<br/>
                 englishs[index].className = 'english'
                 chineses[index].style.display='none'
                 imgs[index].style.display='block'
+            }
+        }
+        for (let i=0;i<ulas.length;i++) {
+            ulas[i].setAttribute('index', i);
+            ulas[i].onclick=function () {
+                for (let j=0;j<ulas.length;j++) {
+                    ulas[j].className=''
+                }
+                this.className='active'
+                let index =this.getAttribute('index')
+                // if (index==1 ) {
+                //         show.style.display='block'
+                //     } else if (index==0 || index==2) {
+                //         show.style.display='none'
+                //     }
+                for (let j=0;j<shorts.length;j++) {
+                    shorts[j].style.display='none'
+                }
+                shorts[index].style.display='block'
             }
         }
         let d_items=document.querySelectorAll('.data_item_1')
