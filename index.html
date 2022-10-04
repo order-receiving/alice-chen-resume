@@ -67,25 +67,25 @@
                             <div class="col-lg-9 col-md-4 overlay-nav">
                                 <ul class="list-group text-left" id="myMenu">
                                     <li class="list-group-item">
-                                        <a href="#hero"><span class="nm">01.</span>Home</a>
+                                        <a href="#hero" ><span class="nm"  id="#hero#">01.</span>Home</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#about"><span class="nm">02.</span>About</a>
+                                        <a href="#about"><span class="nm" id="#about#">02.</span>About</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#portfolio"><span class="nm">03.</span>My Art Portfolio</a>
+                                        <a href="#portfolio"><span class="nm" id="#portfolio#">03.</span>My Art Portfolio</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#testimonial"><span class="nm">04.</span>My Dance</a>
+                                        <a href="#testimonial"><span class="nm" id="#testimonial#">04.</span>My Dance</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#team"><span class="nm">05.</span>MY daily life</a>
+                                        <a href="#team" ><span class="nm" id="#team#">05.</span>MY daily life</a>
                                     </li>                                   
                                     <li class="list-group-item">
-                                        <a href="#blog"><span class="nm">06.</span>Model photo</a>
+                                        <a href="#blog"><span class="nm" id="#blog#">06.</span>Model photo</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#Writing"><span class="nm">07.</span>My Writing</a>
+                                        <a href="#Writing"><span class="nm" id="#Writing#">07.</span>My Writing</a>
                                     </li>
                                 </ul>
                             </div>
@@ -806,6 +806,23 @@
 
     <!--  Custom JS  -->
     <script src="assets/js/aras.js"></script>
+    <script>
+        
+        var loc = location.href;
+        var n1 = loc.length;//地址的总长度
+        var n2 = loc.indexOf("?");//取得=号的位置
+        var id = decodeURI(loc.substr(n2+1, n1-n2));//从=号后面的内容
+        // if (id=='#hero') {
+        //     document.getElementById("#hero#").click();
+        //     // console.log('okok');
+        // } else if (id=='#about') {
+        //     document.getElementById("#about#").click();
 
+        // }
+        console.log(id);
+        window.onload=function(options) {
+            console.log(options);
+        }
+    </script>
 </body>
 </html>
